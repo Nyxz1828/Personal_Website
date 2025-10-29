@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Achievements - Visual Code Studio Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        }
+    </style>
+</html>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+  <header class="bg-gray-800 text-white p-6 text-center">
+    <h1 class="text-4xl font-bold">Achievements</h1>
+    <p class="mt-2 text-lg">A showcase of my educational background and accomplishments.</p>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-6">Education</h2>
+        <div class="space-y-8">
+            <!-- University -->
+            <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl shadow-lg p-8 card-hover" href="https://www.fcu.edu.tw/en/">
+            <h4 class="text-xl font-semibold mb-2">Feng Chia University (逢甲大學)</h4>
+            <p class="text-gray-600 dark:text-gray-300 mb-2">
+                Bachelor Degree in  Information Engineering and Computer Science
+            </p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">2022 – 2026 • Taichung, Taiwan</p>
+            <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                <li>• Focus: Embedded Systems, Data Analytics, Web Engineering</li>
+                <li>• Final Year Project: Automated Warehouse System</li>
+            </ul>
+            </div>
+    
+            <!-- High School -->
+            <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl shadow-lg p-8 card-hover">
+            <h4 class="text-xl font-semibold mb-2">Han Chiang High School</h4>
+            <p class="text-gray-600 dark:text-gray-300 mb-2">Science Stream</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">2016 – 2021 • Penang, Malaysia</p>
+            <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                <li>• Secretary of Robotic Club</li>
+                <li>• Participated in First Lego League(2018-2019)</li>
+            </ul>
+            </div>
+        </div>
+    </section>
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-6">Additional Info</h2>
+      <p class="text-gray-600 dark:text-gray-300 mb-6">Beyond coding, I enjoy learning languages, contributing to open-source projects, and building data tools that inspire others.</p>
+      <div class="flex space-x-6">
+        <a href="" class="text-indigo-600 dark:text-indigo-400 hover:underline"><i data-feather="github"></i> GitHub</a>
+        <a href="" class="text-blue-500 hover:underline"><i data-feather="linkedin"></i> LinkedIn</a>
+        <a href="" class="text-red-500 hover:underline"><i data-feather="mail"></i> Contact</a>
+        <a href="" class="text-purple-600 hover:underline"><i data-feather      ="file-text"></i> Resume</a>
+        <a href="" class="text-green-hover:underline"><i data-feather="globe"></i> Notions</a>
+      </div>    
+    </section>
+  </main>
+    <script>
+        feather.replace();  
+    </script>   
+</body>
+</html>

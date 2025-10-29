@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>🌍 Travel Journal | Chenyu Portfolio</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts (consistent with portfolio) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <style>
+      body {
+        font-family: "Inter", "Noto Sans TC", sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4ecf7 100%);
+        color: #333;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      h1 {
+        font-weight: 700;
+        font-size: 2rem;
+        margin-top: 1.5rem;
+        background: linear-gradient(90deg, #3b82f6, #6366f1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+      }
+
+      #map {
+        width: 100%;
+        height: 45vh; /* half screen */
+        border-radius: 16px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        transition: 0.3s;
+      }
+
+      #map:hover {
+        transform: scale(1.005);
+      }
+
+      .leaflet-popup-content {
+        font-size: 14px;
+      }
+
+      .section-title {
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: #444;
+        margin-bottom: 1rem;
+      }
+
+      .travel-card {
+        border: none;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease;
+      }
+
+      .travel-card:hover {
+        transform: translateY(-2px);
+      }
+
+      footer {
+        margin-top: auto;
+        text-align: center;
+        padding: 1rem;
+        color: #777;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-4">
+      <h1>🌍 我的旅行地圖</h1>
+
+      <!-- Map Section -->
+      <div class="row justify-content-center mt-3">
+        <div class="col-lg-10 col-md-12">
+          <div id="map"></div>
+        </div>
+      </div>
+
+      <!-- Info Section -->
+      <div class="row mt-5">
+        <div class="col-lg-10 col-md-12 mx-auto">
+          <h4 class="section-title">✈️ 旅行資訊</h4>
+          <p class="text-muted">點擊地圖即可新增地點、備註，紀錄每一段旅程。</p>
+
+          <!-- Travel Info Cards -->
+          <div id="travel-info-list" class="mt-4"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>© 2025 Chenyu Portfolio | Travel Journal</footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Initialize Leaflet Map
+      const map = L.map("map").setView([23.6978, 120.9605], 7); // Taiwan center
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; OpenStreetMap contributors',
+      }).addTo(map);
+
+      const savedMarkers = JSON.parse(localStorage.getItem("travelMarkers") || "[]");
+      const infoList = document.getElementById("travel-info-list");
+
+      savedMarkers.forEach(({ lat, lng, note, date }) => {
+        L.marker([lat, lng]).addTo(map).bindPopup(note);
+        appendInfo(note, lat, lng, date);
+      });
+
+      map.on("click", (e) => {
+        const note = prompt("輸入地點名稱或備註：");
+        if (!note) return;
+
+        const date = new Date().toLocaleDateString();
+        L.marker(e.latlng).addTo(map).bindPopup(note).openPopup();
+
+        savedMarkers.push({ lat: e.latlng.lat, lng: e.latlng.lng, note, date });
+        localStorage.setItem("travelMarkers", JSON.stringify(savedMarkers));
+        appendInfo(note, e.latlng.lat, e.latlng.lng, date);
+      });
+
+      function appendInfo(note, lat, lng, date) {
+        const card = document.createElement("div");
+        card.className = "card travel-card mb-3";
+        card.innerHTML = `
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="card-title mb-0">${note}</h5>
+              <span class="text-muted small">${date}</span>
+            </div>
+            <p class="card-text text-muted mb-0">📍 ${lat.toFixed(4)}, ${lng.toFixed(4)}</p>
+          </div>
+        `;
+        infoList.appendChild(card);
+      }
+    </script>
+  </body>
+</html>
