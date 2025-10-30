@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Journal | CodeCraft Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <style>
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        transition: background 0.5s ease, color 0.5s ease;
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      #map {
+        height: 45vh;
+        width: 100%;
+        border-radius: 1rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-gray-800/70 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold gradient-text">CodeCraft Studio</h1>
+        <nav class="hidden md:flex gap-6 text-sm font-medium">
+          <a
+            href="../index.html#about"
+            class="hover:text-indigo-600 dark:hover:text-indigo-400"
+            >About</a
+          >
+          <a
+            href="../index.html#projects"
+            class="hover:text-indigo-600 dark:hover:text-indigo-400"
+            >Projects</a
+          >
+          <a
+            href="../index.html#additional"
+            class="hover:text-indigo-600 dark:hover:text-indigo-400"
+            >Additional</a
+          >
+          <a
+            href="travel.html"
+            class="text-indigo-600 dark:text-indigo-400 font-semibold"
+            >Travel</a
+          >
+        </nav>
+        <button
+          id="themeToggle"
+          class="p-2 rounded-full bg-indigo-100 dark:bg-gray-700"
+        >
+          <i data-feather="moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="text-center py-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">
+        🌍 My Travel Journal
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300">
+        Explore, record, and visualize the places I've been.
+      </p>
+    </section>
+
+    <!-- Map Section -->
+    <section class="max-w-5xl mx-auto px-6 mb-12">
+      <div id="map" class="overflow-hidden"></div>
+      <p
+        class="text-sm text-gray-500 dark:text-gray-400 mt-2 text-center italic"
+      >
+        🗺️ Click anywhere on the map to pin a travel location.
+      </p>
+    </section>
+
+    <!-- Info Section -->
+    <section class="max-w-5xl mx-auto px-6 pb-20">
+      <h3 class="text-2xl font-bold mb-6 text-center">✈️ Travel Logs</h3>
+      <div id="travel-info-list" class="space-y-4"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+      © 2025 Visual Code Studio — Built by Liu Chen Yu 劉晨煜
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Theme toggle (same as index)
+      const toggle = document.getElementById("themeToggle");
+      const icon = toggle.querySelector("i");
+      toggle.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        icon.dataset.feather = document.documentElement.classList.contains("dark")
+          ? "sun"
+          : "moon";
+        feather.replace();
+      });
+      feather.replace();
+
+      // Initialize Leaflet map
+      const map = L.map("map").setView([23.6978, 120.9605], 7); // Taiwan center
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; OpenStreetMap contributors',
+      }).addTo(map);
+
+      const savedMarkers = JSON.parse(localStorage.getItem("travelMarkers") || "[]");
+      const infoList = document.getElementById("travel-info-list");
+
+      // Load saved markers
+      savedMarkers.forEach(({ lat, lng, note, date }) => {
+        L.marker([lat, lng]).addTo(map).bindPopup(note);
+        appendInfo(note, lat, lng, date);
+      });
+
+      // Add new marker
+      map.on("click", (e) => {
+        const note = prompt("Enter location name or note:");
+        if (!note) return;
+        const date = new Date().toLocaleDateString();
+        L.marker(e.latlng).addTo(map).bindPopup(note).openPopup();
+
+        savedMarkers.push({ lat: e.latlng.lat, lng: e.latlng.lng, note, date });
+        localStorage.setItem("travelMarkers", JSON.stringify(savedMarkers));
+        appendInfo(note, e.latlng.lat, e.latlng.lng, date);
+      });
+
+      // Append cards below
+      function appendInfo(note, lat, lng, date) {
+        const card = document.createElement("div");
+        card.className =
+          "bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-md p-5 card-hover";
+        card.innerHTML = `
+          <div class="flex justify-between items-center mb-2">
+            <h4 class="text-lg font-semibold">${note}</h4>
+            <span class="text-sm text-gray-500 dark:text-gray-400">${date}</span>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-300">📍 ${lat.toFixed(
+            4
+          )}, ${lng.toFixed(4)}</p>
+        `;
+        infoList.appendChild(card);
+      }
+    </script>
+  </body>
+</html>
