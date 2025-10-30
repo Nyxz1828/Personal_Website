@@ -1,122 +1,131 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>🌍 Travel Journal | Chenyu Portfolio</title>
-
-    <!-- Bootstrap -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Journal | CodeCraft Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Google Fonts (consistent with portfolio) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
     <style>
       body {
-        font-family: "Inter", "Noto Sans TC", sans-serif;
-        background: linear-gradient(135deg, #f5f7fa 0%, #e4ecf7 100%);
-        color: #333;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
+        font-family: "Space Grotesk", sans-serif;
+        transition: background 0.5s ease, color 0.5s ease;
       }
-
-      h1 {
-        font-weight: 700;
-        font-size: 2rem;
-        margin-top: 1.5rem;
-        background: linear-gradient(90deg, #3b82f6, #6366f1);
+      .gradient-text {
+        background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
+        color: transparent;
       }
-
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.1);
+      }
       #map {
+        height: 45vh;
         width: 100%;
-        height: 45vh; /* half screen */
-        border-radius: 16px;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-        transition: 0.3s;
-      }
-
-      #map:hover {
-        transform: scale(1.005);
-      }
-
-      .leaflet-popup-content {
-        font-size: 14px;
-      }
-
-      .section-title {
-        font-weight: 600;
-        font-size: 1.25rem;
-        color: #444;
-        margin-bottom: 1rem;
-      }
-
-      .travel-card {
-        border: none;
-        border-radius: 16px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        transition: transform 0.2s ease;
-      }
-
-      .travel-card:hover {
-        transform: translateY(-2px);
-      }
-
-      footer {
-        margin-top: auto;
-        text-align: center;
-        padding: 1rem;
-        color: #777;
-        font-size: 0.9rem;
+        border-radius: 1rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       }
     </style>
   </head>
 
-  <body>
-    <div class="container py-4">
-      <h1>🌍 我的旅行地圖</h1>
-
-      <!-- Map Section -->
-      <div class="row justify-content-center mt-3">
-        <div class="col-lg-10 col-md-12">
-          <div id="map"></div>
-        </div>
+  <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-gray-800/70 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold gradient-text">CodeCraft Studio</h1>
+        <nav class="hidden md:flex gap-6 text-sm font-medium">
+          <a
+            href="../index.html#about"
+            class="hover:text-indigo-600 dark:hover:text-indigo-400"
+            >About</a
+          >
+          <a
+            href="../index.html#projects"
+            class="hover:text-indigo-600 dark:hover:text-indigo-400"
+            >Projects</a
+          >
+          <a
+            href="../index.html#additional"
+            class="hover:text-indigo-600 dark:hover:text-indigo-400"
+            >Additional</a
+          >
+          <a
+            href="travel.html"
+            class="text-indigo-600 dark:text-indigo-400 font-semibold"
+            >Travel</a
+          >
+        </nav>
+        <button
+          id="themeToggle"
+          class="p-2 rounded-full bg-indigo-100 dark:bg-gray-700"
+        >
+          <i data-feather="moon"></i>
+        </button>
       </div>
+    </header>
 
-      <!-- Info Section -->
-      <div class="row mt-5">
-        <div class="col-lg-10 col-md-12 mx-auto">
-          <h4 class="section-title">✈️ 旅行資訊</h4>
-          <p class="text-muted">點擊地圖即可新增地點、備註，紀錄每一段旅程。</p>
+    <!-- Hero -->
+    <section class="text-center py-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">
+        🌍 My Travel Journal
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300">
+        Explore, record, and visualize the places I've been.
+      </p>
+    </section>
 
-          <!-- Travel Info Cards -->
-          <div id="travel-info-list" class="mt-4"></div>
-        </div>
-      </div>
-    </div>
+    <!-- Map Section -->
+    <section class="max-w-5xl mx-auto px-6 mb-12">
+      <div id="map" class="overflow-hidden"></div>
+      <p
+        class="text-sm text-gray-500 dark:text-gray-400 mt-2 text-center italic"
+      >
+        🗺️ Click anywhere on the map to pin a travel location.
+      </p>
+    </section>
 
-    <footer>© 2025 Chenyu Portfolio | Travel Journal</footer>
+    <!-- Info Section -->
+    <section class="max-w-5xl mx-auto px-6 pb-20">
+      <h3 class="text-2xl font-bold mb-6 text-center">✈️ Travel Logs</h3>
+      <div id="travel-info-list" class="space-y-4"></div>
+    </section>
 
-    <!-- Bootstrap JS -->
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+      © 2025 Visual Code Studio — Built by Liu Chen Yu 劉晨煜
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
-      // Initialize Leaflet Map
-      const map = L.map("map").setView([23.6978, 120.9605], 7); // Taiwan center
+      // Theme toggle (same as index)
+      const toggle = document.getElementById("themeToggle");
+      const icon = toggle.querySelector("i");
+      toggle.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        icon.dataset.feather = document.documentElement.classList.contains("dark")
+          ? "sun"
+          : "moon";
+        feather.replace();
+      });
+      feather.replace();
 
+      // Initialize Leaflet map
+      const map = L.map("map").setView([23.6978, 120.9605], 7); // Taiwan center
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: '&copy; OpenStreetMap contributors',
       }).addTo(map);
@@ -124,15 +133,16 @@
       const savedMarkers = JSON.parse(localStorage.getItem("travelMarkers") || "[]");
       const infoList = document.getElementById("travel-info-list");
 
+      // Load saved markers
       savedMarkers.forEach(({ lat, lng, note, date }) => {
         L.marker([lat, lng]).addTo(map).bindPopup(note);
         appendInfo(note, lat, lng, date);
       });
 
+      // Add new marker
       map.on("click", (e) => {
-        const note = prompt("輸入地點名稱或備註：");
+        const note = prompt("Enter location name or note:");
         if (!note) return;
-
         const date = new Date().toLocaleDateString();
         L.marker(e.latlng).addTo(map).bindPopup(note).openPopup();
 
@@ -141,17 +151,19 @@
         appendInfo(note, e.latlng.lat, e.latlng.lng, date);
       });
 
+      // Append cards below
       function appendInfo(note, lat, lng, date) {
         const card = document.createElement("div");
-        card.className = "card travel-card mb-3";
+        card.className =
+          "bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-md p-5 card-hover";
         card.innerHTML = `
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <h5 class="card-title mb-0">${note}</h5>
-              <span class="text-muted small">${date}</span>
-            </div>
-            <p class="card-text text-muted mb-0">📍 ${lat.toFixed(4)}, ${lng.toFixed(4)}</p>
+          <div class="flex justify-between items-center mb-2">
+            <h4 class="text-lg font-semibold">${note}</h4>
+            <span class="text-sm text-gray-500 dark:text-gray-400">${date}</span>
           </div>
+          <p class="text-sm text-gray-600 dark:text-gray-300">📍 ${lat.toFixed(
+            4
+          )}, ${lng.toFixed(4)}</p>
         `;
         infoList.appendChild(card);
       }
