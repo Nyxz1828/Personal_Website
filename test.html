@@ -1,26 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Language Switch Example</title>
-  <script src="index.js" defer></script>
-</head>
+<html>
+  <body class="bg-white dark:bg-gray-900 text-black dark:text-white">
 
-<body>
-  
-  <!-- Language Selector Button -->
-  <div style="margin: 20px;">
-    <select id="langBtn">
-      <option value="en">EN</option>
-      <option value="zh">中文</option>
-      <option value="jp">日本語</option>
-    </select>
-  </div>
+    <button id="themeToggle">
+      <i data-feather="moon"></i>
+    </button>
 
-  <!-- CONTENT THAT WILL CHANGE LANGUAGE -->
-  <h1 id="titleText">Welcome to CodeCraft Studio</h1>
-  <p id="descText">This is an example of language switching using JavaScript.</p>
+    <h1 class="text-3xl font-bold">Hello!</h1>
 
-</body>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="script.js"></script>
+  </body>
+
+  <script>
+    feather.replace();
+
+const toggle = document.getElementById("themeToggle");
+
+toggle.addEventListener("click", () => {
+  document.documentElement.classList.toggle("dark");
+
+  const icon = toggle.querySelector("svg");
+
+  icon.setAttribute(
+    "data-feather",
+    document.documentElement.classList.contains("dark") ? "sun" : "moon"
+  );
+
+  feather.replace();
+});
+
+  </script>
 </html>

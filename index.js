@@ -215,41 +215,47 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-// === When dropdown changes language ===
-langSelect.addEventListener("change", function () {
-  const lang = langSelect.value;
+  // === When dropdown changes language ===
+  langSelect.addEventListener("change", function () {
+    const lang = langSelect.value;
 
-  // SPECIAL HANDLING: Self intro block with underline + name
-  document.getElementById("Self_into_text").innerHTML =
-    langPack[lang].Self_into_text +
-    " <span class='border-b-4 border-indigo-500 pb-1' id='name_text'>" +
-    langPack[lang].name_text +
-    "</span>";
-  
-  document.getElementById("addi_info_contact").innerHTML =
-    '<i data-feather="mail">' + '</i>' + " " + langPack[lang].addi_info_contact;
-  document.getElementById("addi_info_Resume").innerHTML =
-    '<i data-feather="file-text" >' + '</i>' + " " + langPack[lang].addi_info_Resume;
-  feather.replace();
+    // SPECIAL HANDLING: Self intro block with underline + name
+    document.getElementById("Self_into_text").innerHTML =
+      langPack[lang].Self_into_text +
+      " <span class='border-b-4 border-indigo-500 pb-1' id='name_text'>" +
+      langPack[lang].name_text +
+      "</span>";
+    
+    document.getElementById("addi_info_contact").innerHTML =
+      '<i data-feather="mail">' + '</i>' + " " + langPack[lang].addi_info_contact;
+    document.getElementById("addi_info_Resume").innerHTML =
+      '<i data-feather="file-text" >' + '</i>' + " " + langPack[lang].addi_info_Resume;
+    feather.replace();
 
 
 
-  // Auto-update *all* elements whose ID matches langPack keys
-  const allElements = document.querySelectorAll("[id]");
+    // Auto-update *all* elements whose ID matches langPack keys
+    const allElements = document.querySelectorAll("[id]");
 
-  allElements.forEach(el => {
-    const key = el.id;
+    allElements.forEach(el => {
+      const key = el.id;
 
-    // Skip special case handled above
-    if (key === "Self_into_text" || key === "name_text" ||   key === "addi_info_Github" || key === "addi_info_linkedln" || key === "addi_info_contact" || key==="addi_info_Resume" || key==="addi_info_Notion") return;
+      // Skip special case handled above
+      if (key === "Self_into_text" || key === "name_text" ||   key === "addi_info_Github" || key === "addi_info_linkedln" || key === "addi_info_contact" || key==="addi_info_Resume" || key==="addi_info_Notion") return;
 
-    if (langPack[lang][key] !== undefined) {
-      el.innerHTML = langPack[lang][key];
-    }
+      if (langPack[lang][key] !== undefined) {
+        el.innerHTML = langPack[lang][key];
+      }
+    });
+
+    console.log("Language changed to:", lang);
   });
 
-  console.log("Language changed to:", lang);
-});
+  
+
+
+
+
 
 
 });
