@@ -6,6 +6,7 @@
   <title>Developer Portfolio | CodeCraft Studio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/feather-icons"></script>
+  <script src="index.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
     body {
@@ -37,7 +38,19 @@
         <a href="#additional" class="hover:text-indigo-600 dark:hover:text-indigo-400">Additional</a>
         <a href="#notes" class="hover:text-indigo-600 dark:hover:text-indigo-400">Notes</a>
         <a href="travel.html" class="hover:text-indigo-600 dark:hover:text-indigo-400">Travel</a>
+        
       </nav>
+
+      <!-- Language Selector -->
+      <div class="relative inline-block text-left">
+        <select id="languageSelect" class="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-1 text-sm font-medium focus:outline-none">
+          <option value="en">EN</option>
+          <option value="zh">中文</option>
+          <option value="jp">日本語</option>
+        </select>
+      </div>
+
+      <!-- themeToggle -->
       <button id="themeToggle" class="p-2 rounded-full bg-indigo-100 dark:bg-gray-700">
         <i data-feather="moon"></i>
       </button>
@@ -46,22 +59,22 @@
 
   <!-- Hero -->
   <section class="text-center py-20">
-    <h2 class="text-5xl font-bold mb-4 gradient-text">Hey, I'm <span class="border-b-4 border-indigo-500 pb-1">Liu Chen Yu</span></h2>
-    <p class="text-lg text-gray-600 dark:text-gray-300">Computer Science GraduateFull-Stack Developer • Data Engineer • Digital Creator</p>
+    <h2 class="text-5xl font-bold mb-4 gradient-text" id="Self_into_text">Hey, I'm <span class="border-b-4 border-indigo-500 pb-1" id="name_text">Liu Chen Yu</span></h2>
+    <p class="text-lg text-gray-600 dark:text-gray-300" id="occupation_text">Computer Science GraduateFull-Stack Developer • Data Engineer • Digital Creator</p>
   </section>
 
   <!-- About Section -->
   <section id="about" class="max-w-5xl mx-auto px-6 py-16">
-    <h3 class="text-3xl font-bold  text-center">About Me</h3>
-    <h2 class="text-1xl  mb-8 text-center">Bios</h2>
+    <h3 class="text-3xl font-bold  text-center" id="AbouT_Me">About Me</h3>
+    <h2 class="text-1xl  mb-8 text-center" id="Bios">Bios</h2>
     <div class="md:flex gap-8">
       <img src="https://static.photos/people/640x360/4" class="md:w-1/3 rounded-xl shadow-md mb-6 md:mb-0 object-cover" alt="Profile">
       <div class="md:w-2/3">
-        <p class="mb-4">I'm a passionate coder who thrives on building efficient, scalable systems. My main focus is turning data and logic into clean, functional web apps.</p>
-        <p class="mb-6">From back-end automation to modern UI interfaces, I enjoy solving real-world problems with technology.</p>
+        <p class="mb-4" id="about_me_text_1">I'm a passionate coder who thrives on building efficient, scalable systems. My main focus is turning data and logic into clean, functional web apps.</p>
+        <p class="mb-6" id="about_me_text_2">From back-end automation to modern UI interfaces, I enjoy solving real-world problems with technology.</p>
         <div class="grid grid-cols-2 gap-6">
           <div>
-            <h4 class="font-semibold mb-2">Languages</h4>
+            <h4 class="font-semibold mb-2" id="Languages">Languages</h4>
             <ul class="space-y-1 text-gray-600 dark:text-gray-300">
               <li>Python</li>
               <li>Java</li>
@@ -135,15 +148,18 @@
       <h3 class="text-3xl font-bold mb-8 text-center">Past Projects</h3>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="rounded-xl overflow-hidden shadow-lg card-hover bg-gray-50 dark:bg-gray-700">
-          <img src="https://static.photos/technology/640x360/1" alt="Project 1" class="w-full h-40 object-cover">
+          <img src="https://media.istockphoto.com/id/473559846/zh/%E7%85%A7%E7%89%87/baseball-player-in-stadium.jpg?s=612x612&w=0&k=20&c=Ydjmuoq6LWi3qDsLImCA8m6DcsSJLtNyIbsek86q2ao=" alt="Project 1" class="w-full h-40 object-cover">
           <div class="p-5" >
             <h4 class="text-xl font-semibold mb-2">ProBall Analytics</h4>
-            <p class="text-sm mb-3 text-gray-600 dark:text-gray-300">A baseball analytics web app using Flask, JSON APIs, and Chart.js for CPBL data visualization.</p>
+            <p class="text-sm mb-3 text-gray-600 dark:text-gray-300">A baseball analytics web app using HTML, JSON APIs, and JavaScript for CPBL data visualization.</p>
             <div class="flex flex-wrap gap-2">
               <a href="projects.html"></a>
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Flask</span>
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Chart.js</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">HTML</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">JavaScript</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">css</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">API</span>
               <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">JSON</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">python</span>
             </div>
           </div>
         </div>
@@ -151,7 +167,7 @@
         <div class="rounded-xl overflow-hidden shadow-lg card-hover bg-gray-50 dark:bg-gray-700">
           <img src="https://static.photos/minimal/640x360/2" alt="Project 2" class="w-full h-40 object-cover">
           <div class="p-5">
-            <h4 class="text-xl font-semibold mb-2">AI Chatbot</h4>
+            <h4 class="text-xl font-semibold mb-2">Will</h4>
             <p class="text-sm mb-3 text-gray-600 dark:text-gray-300">Custom chatbot built using Node.js, OpenAI API, and Tailwind for UI integration.</p>
             <div class="flex flex-wrap gap-2">
               <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Node.js</span>
