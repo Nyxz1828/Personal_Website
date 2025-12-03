@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Portfolio | CodeCraft Studio</title>
+    <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwindcss has darkmode issue, -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="index.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      transition: background 1s ease, color 1s ease ;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-700 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-gray-800/70 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold gradient-text">CodeCraft Studio</h1>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400">About</a>
+        <a href="#projects" class="hover:text-indigo-600 dark:hover:text-indigo-400">Projects</a>
+        <a href="#additional" class="hover:text-indigo-600 dark:hover:text-indigo-400">Additional</a>
+        <a href="#notes" class="hover:text-indigo-600 dark:hover:text-indigo-400">Notes</a>
+        <a href="travel.html" class="hover:text-indigo-600 dark:hover:text-indigo-400">Travel</a>
+        
+      </nav>
+
+      <!-- Language Selector -->
+      <div class="relative inline-block text-left">
+        <select id="languageSelect" class="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-1 text-sm font-medium focus:outline-none">
+          <option value="en">EN</option>
+          <option value="zh">中文</option>
+          <option value="jp">日本語</option>
+        </select>
+      </div>
+
+      <!-- themeToggle -->
+      <button id="themeToggle" class="p-2 rounded-full bg-indigo-100 dark:bg-gray-700">
+        <i data-feather="moon"></i>
+      </button>
+    </div>
+  </header>
+
+
+
+
+
+  <!-- Past Projects -->
+  <section id="projects" class="bg-transparent dark:bg-gray-800 py-16" >
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-8 text-center" id="past_project">Past Projects</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="rounded-xl overflow-hidden shadow-lg card-hover bg-gray-50 dark:bg-gray-700">
+          <img src="https://media.istockphoto.com/id/473559846/zh/%E7%85%A7%E7%89%87/baseball-player-in-stadium.jpg?s=612x612&w=0&k=20&c=Ydjmuoq6LWi3qDsLImCA8m6DcsSJLtNyIbsek86q2ao=" alt="Project 1" class="w-full h-40 object-cover">
+          <div class="p-5" >
+            <h4 class="text-xl font-semibold mb-2" id="PJ1">ProBall Analytics</h4>
+            <p class="text-sm mb-3 text-gray-600 dark:text-gray-300" id="PJ1_description">A baseball analytics web app using HTML, JSON APIs, and JavaScript for CPBL data visualization.</p>
+            <div class="flex flex-wrap gap-2">
+              <a href="projects.html"></a>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">HTML</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">JavaScript</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">css</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">API</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">JSON</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">python</span>
+            </div>
+          </div>
+        </div>
+        
+<div class="rounded-xl overflow-hidden shadow-lg w-full aspect-video">
+  <iframe
+    class="w-full h-full"
+    src="https://www.youtube.com/embed/ZImIZ4S9U5k?si=Jfjm6xhrPZxrGNjs"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+    <!-- School Projects and more -->
+  <section id="notes" class="bg-transparent dark:bg-gray-800 py-16" >
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-8 text-center" id="Archieve_id">📁 Schools Notes & Projects Archive </h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="rounded-xl overflow-hidden shadow-lg card-hover bg-gray-50 dark:bg-gray-700">
+          <img src="https://tse3.mm.bing.net/th/id/OIP.kZDan7yEDKKOdqqjnsWPdgHaFj?pid=Api&P=0&h=180" alt="Notion" class="w-full h-40 object-cover">
+          <div class="p-5" >
+            <h4 class="text-xl font-semibold mb-2"><a href="https://innate-situation-99a.notion.site/Programming-Computer-Science-1288c0171407806e990be5905380b2ca"   id="Notion_Notes">Notions Notes</a></h4>
+            <p class="text-sm mb-3 text-gray-600 dark:text-gray-300" id="Notions_descriptions"> Personal notes and past homework from school during University</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full" id="Notion_point1">Programming languages</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full" id="Notion_point2">AI related</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full" id="Notion_point3">Full-Stack</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl overflow-hidden shadow-lg card-hover bg-gray-50 dark:bg-gray-700">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Colaboratory_SVG_Logo.svg/2560px-Google_Colaboratory_SVG_Logo.svg.png" alt="Project 2" class="w-full h-40 object-cover">
+          <div class="p-5">
+            <h4 class="text-xl font-semibold mb-2">
+              <a href="https://docs.google.com/spreadsheets/d/1gPMBbRLYKh4aBUKICRaeYg0CpI1azHHUst93TEh1kz4/edit?usp=sharing" id="Google_colab">
+                Google Colab Notes
+              </a></h4>
+            <p class="text-sm mb-3 text-gray-600 dark:text-gray-300"  id="Google_Colab_descriptions">Google Colabs Codes which includes</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full" id="Colab_point1">Google Scripts</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full" id="Colab_point2">NLP</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full" id="Colab_point3">Personal Works</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl overflow-hidden shadow-lg card-hover bg-gray-50 dark:bg-gray-700">
+          <img src="https://static.photos/abstract/640x360/3" alt="Project 3" class="w-full h-40 object-cover">
+          <div class="p-5">
+            <h4 class="text-xl font-semibold mb-2"><a href="https://github.com/Nyxz1828" id="Github">GitHub</a></h4>
+            <p class="text-sm mb-3 text-gray-600 dark:text-gray-300" id="Github_description">Some respository are being stored here. Past-project if kept are usually in notions or Colab</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full" id="Github_point1">IoT</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full" id="Github_point2">MySQL</span>
+              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full"  id="Github_point3">C++</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Section -->
+  <section id="additional" class="max-w-5xl mx-auto px-6 py-16">
+    <h3 class="text-3xl font-bold mb-6 text-center" id="Addi_info">Additional Info</h3>
+    <p class="text-center text-gray-600 dark:text-gray-300 mb-6" id="addi_info_description">Beyond coding, I enjoy learning languages, contributing to open-source projects, and building data tools that inspire others.</p>
+    <div class="flex justify-center space-x-6">
+      <a href="https://github.com/Nyxz1828" class="text-indigo-600 dark:text-indigo-400 hover:underline"id="addi_info_Github"><i data-feather="github" ></i> GitHub</a>
+      <a href="#" class="text-blue-500 hover:underline"id="addi_info_linkedln"><i data-feather="linkedin" ></i> LinkedIn</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=liuchenyu4work@gmail.com" class="text-red-500 hover:underline" id="addi_info_contact"><i data-feather="mail"></i> Contact</a>
+      <a href="#" class="text-purple-600 hover:underline" id="addi_info_Resume"><i data-feather="file-text" ></i> Resume</a>
+      <a href="https://innate-situation-99a.notion.site/Programming-Computer-Science-1288c0171407806e990be5905380b2ca?pvs=74" class="text-green-500 hover:underline" id="addi_info_Notion"><i data-feather="globe"></i> Notions</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center" id="build_by">
+    © 2025 Visual Code Studio — Built by Liu Chen Yu 劉晨煜
+  </footer>
+
+  <script>
+// Feather icons init
+feather.replace();
+// Theme toggle
+const toggle = document.getElementById("themeToggle");
+toggle.addEventListener("click", () => {
+  // Switch dark/light class on <html>
+  document.documentElement.classList.toggle("dark");
+
+  // Get the actual SVG icon (Feather replaced the <i>)
+  const icon = toggle.querySelector("svg");
+  // Swap icon name
+  icon.setAttribute(
+    "data-feather",
+    document.documentElement.classList.contains("dark") ? "moon" : "sun"
+  );
+
+  // Re-render the icon
+  feather.replace();
+
+  console.log("Theme toggled");
+});
+
+  </script>
+</body>
+</html>

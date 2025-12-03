@@ -1,33 +1,70 @@
-<html>
-  <body class="bg-white dark:bg-gray-900 text-black dark:text-white">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Copy Code Example</title>
+  <style>
+    .code-wrapper {
+      position: relative;
+      background: #1e1e1e;
+      color: #f5f5f5;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-family: Consolas, "Courier New", monospace;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
 
-    <button id="themeToggle">
-      <i data-feather="moon"></i>
-    </button>
+    .copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      padding: 4px 8px;
+      font-size: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      background: #3b82f6;
+      color: white;
+    }
 
-    <h1 class="text-3xl font-bold">Hello!</h1>
+    .copy-btn:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
 
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="script.js"></script>
-  </body>
+  <h2>Copy this code:</h2>
+
+  <div class="code-wrapper">
+    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+    <pre><code>
+const message = "Hello, world!";
+console.log(message);
+    </code></pre>
+  </div>
 
   <script>
-    feather.replace();
+    function copyCode(button) {
+      // 找到這個按鈕同一個區塊裡的 code 文字
+      const codeBlock = button.parentElement.querySelector("code");
+      const text = codeBlock.innerText;
 
-const toggle = document.getElementById("themeToggle");
-
-toggle.addEventListener("click", () => {
-  document.documentElement.classList.toggle("dark");
-
-  const icon = toggle.querySelector("svg");
-
-  icon.setAttribute(
-    "data-feather",
-    document.documentElement.classList.contains("dark") ? "sun" : "moon"
-  );
-
-  feather.replace();
-});
-
+      // 使用 Clipboard API 複製
+      navigator.clipboard.writeText(text).then(() => {
+        const oldText = button.innerText;
+        button.innerText = "Copied!";
+        setTimeout(() => {
+          button.innerText = oldText;
+        }, 1500);
+      }).catch(err => {
+        console.error("Copy failed:", err);
+      });
+    }
   </script>
+
+  <iframe src="https://innate-situation-99a.notion.site/ebd/f589ad27932945c5be1aa6eb43eab655" width="100%" height="600" frameborder="0" allowfullscreen />
+
+</body>
 </html>
