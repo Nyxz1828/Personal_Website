@@ -1,0 +1,23 @@
+[
+  {
+    "title": "ProBall Analytics",
+    "link": "FYP.html",
+    "image": "https://media.istockphoto.com/id/473559846/zh/%E7%85%A7%E7%89%87/baseball-player-in-stadium.jpg?s=612x612&w=0&k=20&c=Ydjmuoq6LWi3qDsLImCA8m6DcsSJLtNyIbsek86q2ao=",
+    "description": "A baseball analytics web app using HTML, JSON APIs, and JavaScript for CPBL data visualization.",
+    "tags": ["HTML", "JavaScript", "CSS", "API", "JSON", "Python"]
+  },
+  {
+    "title": "AI Chatbot System",
+    "link": "chatbot.html",
+    "image": "https://static.photos/minimal/640x360/2",
+    "description": "Custom chatbot built using Node.js, OpenAI API, and Tailwind for UI integration.",
+    "tags": ["Node.js", "OpenAI API", "Express"]
+  },
+  {
+    "title": "English Teaching Platform",
+    "link": "English_teaching_Platform.html",
+    "image": "https://static.photos/abstract/640x360/3",
+    "description": "School project integrating Object-Oriented Programming and database synchronization.",
+    "tags": ["React", "Full-Stack", "Supabase"]
+  }
+]

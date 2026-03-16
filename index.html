@@ -13,13 +13,14 @@
       darkMode: 'class'
     }
   </script>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script src="index.js"></script>
+
+  <script src="index.js" defer></script>
+  <script src="projects.js" defer  ></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
     body {
       font-family: 'Space Grotesk', sans-serif;
-      transition: background 1s ease, color 1s ease ;
+      transition: background 1s ease, color 1s ease;
     }
     .gradient-text {
       background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
@@ -151,56 +152,27 @@
     </div> -->
   </section>
 
-  <!-- Past Projects -->
-  <section id="projects" class="bg-transparent dark:bg-gray-800 py-16" >
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-3xl font-bold mb-8 text-center" id="past_project">Past Projects</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="rounded-xl overflow-hidden shadow-lg card-hover bg-gray-50 dark:bg-gray-700">
-          <img src="https://media.istockphoto.com/id/473559846/zh/%E7%85%A7%E7%89%87/baseball-player-in-stadium.jpg?s=612x612&w=0&k=20&c=Ydjmuoq6LWi3qDsLImCA8m6DcsSJLtNyIbsek86q2ao=" alt="Project 1" class="w-full h-40 object-cover">
-          <div class="p-5" >
-            <h4 class="text-xl font-semibold mb-2" id="PJ1"><a href="FYP.html">ProBall Analytics</a></h4>
-            <p class="text-sm mb-3 text-gray-600 dark:text-gray-300" id="PJ1_description">A baseball analytics web app using HTML, JSON APIs, and JavaScript for CPBL data visualization.</p>
-            <div class="flex flex-wrap gap-2">
-              <a href="projects.html"></a>
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">HTML</span>
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">JavaScript</span>
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">css</span>
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">API</span>
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">JSON</span>
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">python</span>
-            </div>
-          </div>
-        </div>
+  <!--  Projects -->
+<section id="projects" class="bg-transparent dark:bg-gray-800 py-16 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6">
+    <h3 class="text-3xl font-bold mb-8 text-center" id="past_project">Projects</h3>
 
-        <div class="rounded-xl overflow-hidden shadow-lg card-hover bg-gray-50 dark:bg-gray-700">
-          <img src="https://static.photos/minimal/640x360/2" alt="Project 2" class="w-full h-40 object-cover">
-          <div class="p-5">
-            <h4 class="text-xl font-semibold mb-2" id="PJ2">Will Be Updated</h4>
-            <p class="text-sm mb-3 text-gray-600 dark:text-gray-300" id="PJ2_description">>Custom chatbot built using Node.js, OpenAI API, and Tailwind for UI integration.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Node.js</span>
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">OpenAI API</span>
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Express</span>
-            </div>
-          </div>
-        </div>
+    <div class="relative">
+      <div id="projects-slider" class="overflow-hidden">
+        <div id="projects-track" class="flex transition-transform duration-500 ease-in-out"></div>
+      </div>
 
-        <div class="rounded-xl overflow-hidden shadow-lg card-hover bg-gray-50 dark:bg-gray-700">
-          <img src="https://static.photos/abstract/640x360/3" alt="Project 3" class="w-full h-40 object-cover">
-          <div class="p-5">
-            <h4 class="text-xl font-semibold mb-2" id="PJ3"><a href="English_teaching_Platform.html">English Teaching Platform</a></h4>
-            <p class="text-sm mb-3 text-gray-600 dark:text-gray-300" id="PJ3_description">School project integrating Object-Oriented Programming, and database synchronization.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">React</span>
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Full-Stack</span>
-              <span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Supabase</span>
-            </div>
-          </div>
-        </div>
+      <div class="flex justify-between mt-4">
+        <button id="prevBtn" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded">
+          Prev
+        </button>
+        <button id="nextBtn" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded">
+          Next
+        </button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
     <!-- School Projects and more -->
   <section id="notes" class="bg-transparent dark:bg-gray-800 py-16" >
