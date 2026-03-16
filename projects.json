@@ -7,17 +7,25 @@
     "tags": ["HTML", "JavaScript", "CSS", "API", "JSON", "Python"]
   },
   {
-    "title": "AI Chatbot System",
-    "link": "chatbot.html",
-    "image": "https://static.photos/minimal/640x360/2",
-    "description": "Custom chatbot built using Node.js, OpenAI API, and Tailwind for UI integration.",
-    "tags": ["Node.js", "OpenAI API", "Express"]
-  },
-  {
     "title": "English Teaching Platform",
     "link": "English_teaching_Platform.html",
     "image": "https://static.photos/abstract/640x360/3",
     "description": "School project integrating Object-Oriented Programming and database synchronization.",
     "tags": ["React", "Full-Stack", "Supabase"]
+  },
+    {
+    "title": "JLPT Learning Game (WIP)",
+    "link": "JLPT_Learning_Game.html",
+    "image": "https://jlpt-apply.jfmo.org.ph/img/logo_big.png",
+    "description": "Personal project creating a JLPT learning game using Unity and C# for interactive language learning.",
+    "tags": ["Unity", "C#", "Game Development"]
+  }
+  ,
+    {
+    "title": "Reciept & Financial Management System (WIP)",
+    "link": "Financial_Management_System.html",
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/049/355/955/small_2x/receipt-icon-set-tax-payment-reciept-symbol-order-purchase-invoice-sign-credit-debt-bill-icon-in-black-filled-and-outlined-style-vector.jpg",
+    "description": "A bill splitting app with a financial dashboard by using tesseract OCR for receipt scanning and React for the frontend.",
+    "tags": ["React", "Full-Stack", "tesseract OCR"]
   }
 ]
