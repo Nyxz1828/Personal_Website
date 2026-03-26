@@ -7,12 +7,14 @@
     "tags": ["HTML", "JavaScript", "CSS", "API", "JSON", "Python"]
   },
   {
-    "title": "English Teaching Platform",
-    "link": "English_teaching_Platform.html",
-    "image": "https://static.photos/abstract/640x360/3",
-    "description": "School project integrating Object-Oriented Programming and database synchronization.",
-    "tags": ["React", "Full-Stack", "Supabase"]
-  },
+    "title": "Automated Customer Service System (WIP)",
+    "link": "https://github.com/Nyxz1828/Realtime_Customer_Service_VoiceChat_with_OpenAI_API",
+    "image": "https://static.vecteezy.com/system/resources/previews/023/849/958/original/customer-service-icon-in-flat-design-female-call-center-with-headphones-and-microphone-is-using-laptop-symbols-of-help-and-support-teams-png.png",
+    "description": "This project is a voice chat prototype built on the OpenAI Realtime API using WebRTC. It captures microphone audio, sends the SDP offer to the backend, and connects to OpenAI for real-time speech-to-speech interaction.",
+    "tags": ["API", "JavaScript", "WebRTC", "OpenAI"]
+  }
+  ,
+
     {
     "title": "JLPT Learning Game (WIP)",
     "link": "JLPT_Learning_Game.html",
@@ -27,5 +29,12 @@
     "image": "https://static.vecteezy.com/system/resources/thumbnails/049/355/955/small_2x/receipt-icon-set-tax-payment-reciept-symbol-order-purchase-invoice-sign-credit-debt-bill-icon-in-black-filled-and-outlined-style-vector.jpg",
     "description": "A bill splitting app with a financial dashboard by using tesseract OCR for receipt scanning and React for the frontend.",
     "tags": ["React", "Full-Stack", "tesseract OCR"]
+  },
+  {
+    "title": "English Teaching Platform",
+    "link": "English_teaching_Platform.html",
+    "image": "https://static.photos/abstract/640x360/3",
+    "description": "School project integrating Object-Oriented Programming and database synchronization.",
+    "tags": ["React", "Full-Stack", "Supabase"]
   }
-]
+]   
