@@ -7,13 +7,22 @@
     "tags": ["HTML", "JavaScript", "CSS", "API", "JSON", "Python"]
   },
   {
-    "title": "Automated Customer Service System (WIP)",
-    "link": "https://github.com/Nyxz1828/Realtime_Customer_Service_VoiceChat_with_OpenAI_API",
+    "title": "Automated Customer Service System",
+    "link": "https://github.com/Nyxz1828/Realtime_VoiceChat_system_with_OpenAI_API",
     "image": "https://static.vecteezy.com/system/resources/previews/023/849/958/original/customer-service-icon-in-flat-design-female-call-center-with-headphones-and-microphone-is-using-laptop-symbols-of-help-and-support-teams-png.png",
     "description": "This project is a voice chat prototype built on the OpenAI Realtime API using WebRTC. It captures microphone audio, sends the SDP offer to the backend, and connects to OpenAI for real-time speech-to-speech interaction.",
     "tags": ["API", "JavaScript", "WebRTC", "OpenAI"]
   }
   ,
+    {
+    "title": "Japanese Flashcards Widget",
+    "link": "https://github.com/Nyxz1828/Japanese-vocab-widget",
+    "image": "https://jlpt-apply.jfmo.org.ph/img/logo_big.png",
+    "description": "Personal project creating a JLPT learning game using Unity and C# for interactive language learning.",
+    "tags": ["Unity", "C#", "Game Development"]
+  }
+  ,
+
 
     {
     "title": "JLPT Learning Game (WIP)",
