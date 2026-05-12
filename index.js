@@ -215,16 +215,71 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  function cleanIntroText(value) {
+    return value
+      .replace(/<br\s*\/?>/gi, " ")
+      .replace(/<[^>]*>/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function appendForestText(parent, text) {
+    Array.from(text).forEach(char => {
+      if (char === " ") {
+        const space = document.createElement("span");
+        space.className = "forest-space";
+        space.setAttribute("aria-hidden", "true");
+        parent.appendChild(space);
+        return;
+      }
+
+      const hover = document.createElement("span");
+      hover.className = "forest-hover";
+      hover.setAttribute("aria-hidden", "true");
+      hover.tabIndex = 0;
+
+      const charEl = document.createElement("span");
+      charEl.className = "forest-char";
+      charEl.textContent = char;
+
+      hover.appendChild(charEl);
+      parent.appendChild(hover);
+    });
+  }
+
+  function renderSelfIntro(lang) {
+    const intro = document.getElementById("Self_into_text");
+    const introText = cleanIntroText(langPack[lang].Self_into_text);
+    const nameText = cleanIntroText(langPack[lang].name_text);
+
+    intro.innerHTML = "";
+    intro.classList.remove("gradient-text");
+    intro.classList.add("forest-intro");
+    intro.setAttribute("aria-label", `${introText} ${nameText}`);
+
+    appendForestText(intro, introText);
+
+    const gap = document.createElement("span");
+    gap.className = "forest-space";
+    gap.setAttribute("aria-hidden", "true");
+    intro.appendChild(gap);
+
+    const name = document.createElement("span");
+    name.id = "name_text";
+    name.className = "border-b-4 border-indigo-500 pb-1";
+    name.setAttribute("aria-hidden", "true");
+    appendForestText(name, nameText);
+    intro.appendChild(name);
+  }
+
+  renderSelfIntro(langSelect.value);
+
   // === When dropdown changes language ===
   langSelect.addEventListener("change", function () {
     const lang = langSelect.value;
 
     // SPECIAL HANDLING: Self intro block with underline + name
-    document.getElementById("Self_into_text").innerHTML =
-      langPack[lang].Self_into_text +
-      " <span class='border-b-4 border-indigo-500 pb-1' id='name_text'>" +
-      langPack[lang].name_text +
-      "</span>";
+    renderSelfIntro(lang);
     
     document.getElementById("addi_info_contact").innerHTML =
       '<i data-feather="mail">' + '</i>' + " " + langPack[lang].addi_info_contact;

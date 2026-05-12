@@ -17,9 +17,9 @@
   <script src="index.js" defer></script>
   <script src="projects.js" defer  ></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Montserrat:wght@900&display=swap');
     body {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: 'Comfortaa', sans-serif;
       transition: background 1s ease, color 1s ease;
     }
     .gradient-text {
@@ -32,6 +32,87 @@
       transform: translateY(-6px);
       box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.1);
     }
+    .forest-intro {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.08em;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+    .forest-intro #name_text {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.08em;
+    }
+    .forest-intro .forest-hover {
+      display: inline-grid;
+      min-width: 0.62em;
+      place-items: center;
+      position: relative;
+    }
+    .forest-intro .forest-space {
+      width: 0.34em;
+    }
+    .forest-intro .forest-char {
+      color: transparent;
+      display: inline-block;
+      -webkit-text-stroke: 2px #8b5cf6;
+      text-shadow: none;
+      transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      will-change: transform;
+    }
+    .forest-intro .forest-hover:hover .forest-char,
+    .forest-intro .forest-hover:focus-visible .forest-char {
+      color: #fff;
+      transform: scale(1.5);
+      -webkit-text-stroke: 2px transparent;
+      text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .header-link {
+      position: relative;
+      display: inline-block;
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+    .header-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -0.35rem;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.25s ease;
+    }
+    .header-link:hover,
+    .header-link:focus-visible {
+      transform: translateY(-2px);
+    }
+    .header-link:hover::after,
+    .header-link:focus-visible::after {
+      transform: scaleX(1);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .forest-intro .forest-char,
+      .header-link,
+      .header-link::after {
+        transition: none;
+      }
+      .forest-intro .forest-hover:hover .forest-char,
+      .forest-intro .forest-hover:focus-visible .forest-char,
+      .header-link:hover,
+      .header-link:focus-visible {
+        transform: none;
+      }
+    }
   </style>
 </head>
 
@@ -43,10 +124,10 @@
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold gradient-text">CodeCraft Studio</h1>
       <nav class="hidden md:flex gap-6 text-sm font-medium">
-        <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400">About</a>
-        <a href="#projects" class="hover:text-indigo-600 dark:hover:text-indigo-400">Projects</a>
-        <a href="#additional" class="hover:text-indigo-600 dark:hover:text-indigo-400">Additional</a>
-        <a href="#notes" class="hover:text-indigo-600 dark:hover:text-indigo-400">Notes</a>
+        <a href="#about" class="header-link hover:text-indigo-600 dark:hover:text-indigo-400">About</a>
+        <a href="#projects" class="header-link hover:text-indigo-600 dark:hover:text-indigo-400">Projects</a>
+        <a href="#additional" class="header-link hover:text-indigo-600 dark:hover:text-indigo-400">Additional</a>
+        <a href="#notes" class="header-link hover:text-indigo-600 dark:hover:text-indigo-400">Notes</a>
         <!-- <a href="travel.html" class="hover:text-indigo-600 dark:hover:text-indigo-400">Travel</a> -->
         
       </nav>
@@ -69,7 +150,12 @@
 
   <!-- Hero -->
   <section class="text-center py-20">
-    <h2 class="text-5xl font-bold mb-4 gradient-text" id="Self_into_text">Hey, I'm <span class="border-b-4 border-indigo-500 pb-1" id="name_text">Liu Chen Yu</span></h2>
+    <h2 class="text-5xl font-bold mb-4 forest-intro" id="Self_into_text" aria-label="Hey, I'm Liu Chen Yu">
+      <span class="forest-hover" aria-hidden="true"><span class="forest-char">H</span></span><span class="forest-hover" aria-hidden="true"><span class="forest-char">e</span></span><span class="forest-hover" aria-hidden="true"><span class="forest-char">y</span></span><span class="forest-hover" aria-hidden="true"><span class="forest-char">,</span></span><span class="forest-space" aria-hidden="true"></span><span class="forest-hover" aria-hidden="true"><span class="forest-char">I</span></span><span class="forest-hover" aria-hidden="true"><span class="forest-char">'</span></span><span class="forest-hover" aria-hidden="true"><span class="forest-char">m</span></span><span class="forest-space" aria-hidden="true"></span>
+      <span class="border-b-4 border-indigo-500 pb-1" id="name_text" aria-hidden="true">
+        <span class="forest-hover"><span class="forest-char">L</span></span><span class="forest-hover"><span class="forest-char">i</span></span><span class="forest-hover"><span class="forest-char">u</span></span><span class="forest-space"></span><span class="forest-hover"><span class="forest-char">C</span></span><span class="forest-hover"><span class="forest-char">h</span></span><span class="forest-hover"><span class="forest-char">e</span></span><span class="forest-hover"><span class="forest-char">n</span></span><span class="forest-space"></span><span class="forest-hover"><span class="forest-char">Y</span></span><span class="forest-hover"><span class="forest-char">u</span></span>
+      </span>
+    </h2>
     <p class="text-lg text-gray-600 dark:text-gray-300" id="occupation_text">Computer Science Graduate • Full-Stack Developer • Software Engineer • Digital Creator</p>
   </section>
 
