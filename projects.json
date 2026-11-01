@@ -60,7 +60,7 @@
   },
   {
     "title": "English Teaching Platform",
-    "link": "English_teaching_Platform.html",
+    "link": "projects/English_teaching_Platform.html",
     "image": "https://static.photos/abstract/640x360/3",
     "description": "School project integrating Object-Oriented Programming and database synchronization.",
     "tags": [

@@ -116,6 +116,9 @@ export async function renderComponents(root = document) {
       // A second render call may have finished while this request was pending.
       if (target.dataset.rendered) return;
       target.innerHTML = markup;
+      target.querySelectorAll('[data-site-home]').forEach(link => {
+        link.href = new URL('index.html', base).href;
+      });
       await translate(target);
       for (const link of target.querySelectorAll('[data-home-anchor]')) {
         if (document.querySelector('[data-component="' + link.dataset.homeAnchor + '"]')) {

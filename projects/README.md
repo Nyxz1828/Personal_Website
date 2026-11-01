@@ -1,5 +1,16 @@
 # Project pages
 
+## English Teaching Platform
+
+`English_teaching_Platform.html` uses `components/english_teaching.html` for its
+project overview, collaborator links, video, and course document. Edit the
+`english_teaching.json` file in `languages/english/`, `languages/chinese/`, or
+`languages/japanese/` to update its text. The header, notes, additional links,
+and footer share the same components as the index and FYP pages.
+The original root URL redirects to this page.
+
+## ProBall Analytics
+
 `FYP.html` renders the ProBall Analytics final-year project using the shared
 component system. Its page content and video live in `components/fyp.html`.
 Edit its translations in `languages/english/fyp.json`,

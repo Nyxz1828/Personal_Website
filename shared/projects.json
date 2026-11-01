@@ -55,7 +55,7 @@
   },
   {
     "id": "english-teaching",
-    "link": "English_teaching_Platform.html",
+    "link": "projects/English_teaching_Platform.html",
     "image": "https://static.photos/abstract/640x360/3",
     "tags": [
       "React",

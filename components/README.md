@@ -4,7 +4,7 @@ Open `index.html` through a local web server (VS Code Live Server works). The
 renderer fetches HTML and JSON, so opening the file directly with `file://`
 will not work. No build command is needed.
 
-`index.html` and `home.html` use the shared component implementation. Pages
+`index.html` uses the shared component implementation. Pages
 that use these components share updates automatically.
 
 ## Render sections on another page

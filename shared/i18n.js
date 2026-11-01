@@ -5,7 +5,7 @@ export const languages = {
   jp: { label: '日本語', htmlLang: 'ja', folder: 'japanese' },
 };
 
-export const componentNames = ['header', 'intro', 'about', 'education', 'projects', 'notes', 'additional', 'footer', 'fyp'];
+export const componentNames = ['header', 'intro', 'about', 'education', 'projects', 'notes', 'additional', 'footer', 'fyp', 'english_teaching'];
 
 const requests = new Map();
 function fetchComponent(code, component) {

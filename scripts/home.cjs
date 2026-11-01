@@ -47,7 +47,7 @@ const puppeteer = require('puppeteer');
     await page.goto(origin + '/index.html');
     await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 8);
     assert.equal(await page.$$eval('#projects-track > div', cards => cards.length), 6);
-    assert.equal(packRequests.length, 9);
+    assert.equal(packRequests.length, 10);
     assert(packRequests.every(key => key.startsWith('english/')));
     for (const [lang, htmlLang, about, title] of [
       ['zh', 'zh-Hant', '關於我', '自動化客服系統'],
@@ -74,8 +74,8 @@ const puppeteer = require('puppeteer');
     assert.equal(await page.$eval('html', element => element.classList.contains('dark')), !dark);
     await page.select('#languageSelect', 'zh');
     await page.waitForFunction(() => document.documentElement.lang === 'zh-Hant');
-    assert.equal(packRequests.length, 27);
-    assert.equal(new Set(packRequests).size, 27);
+    assert.equal(packRequests.length, 30);
+    assert.equal(new Set(packRequests).size, 30);
     await page.reload();
     await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 8);
     assert.equal(await page.$eval('#languageSelect', element => element.value), 'zh');
@@ -104,6 +104,29 @@ const puppeteer = require('puppeteer');
     await page.goto(origin + '/index.html');
     await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 8);
     assert((await page.$eval('#projects-track a', element => element.href)).endsWith('/projects/FYP.html'));
+    assert((await page.$eval('#projects-track a[href$="English_teaching_Platform.html"]', element => element.href)).endsWith('/projects/English_teaching_Platform.html'));
+    await page.goto(origin + '/projects/English_teaching_Platform.html');
+    await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 5);
+    assert.equal(await page.$eval('[data-site-home]', element => element.href), origin + '/index.html');
+    await page.click('[data-site-home]');
+    await page.waitForFunction(() => location.pathname === '/index.html' && document.querySelectorAll('[data-rendered]').length === 8);
+    await page.goto(origin + '/projects/English_teaching_Platform.html');
+    await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 5);
+    for (const lang of ['en', 'zh', 'jp']) {
+      await page.evaluate(async code => (await import('/shared/render.js')).setLanguage(code), lang);
+      const translated = JSON.parse(fs.readFileSync(path.join(root, 'languages', {en:'english',zh:'chinese',jp:'japanese'}[lang], 'english_teaching.json'), 'utf8'));
+      assert.equal(await page.$eval('[data-i18n="teaching_title"]', element => element.textContent.trim()), translated.teaching_title);
+      assert.equal(await page.$eval('[data-i18n="teaching_description"]', element => element.textContent), translated.teaching_description);
+      assert.equal(await page.$eval('iframe[data-i18n-title="teaching_demo_title"]', element => element.title), translated.teaching_demo_title);
+      assert.equal(await page.$eval('a[data-i18n="teaching_view_project"]', element => element.href), 'https://github.com/Nyxz1828/English_Teaching_Platform');
+      assert((await page.$eval('#teaching iframe', element => element.src)).includes('19wJciQIt_5PQBXwY4134XWAINEoM1iOE36mvZr7UgFA'));
+      assert((await page.$eval('iframe[data-i18n-title="teaching_demo_title"]', element => element.src)).includes('fQDh_eruuwQ'));
+      assert((await page.$eval('[data-home-anchor="projects"]', element => element.href)).endsWith('/index.html#projects'));
+    }
+    await page.goto(origin + '/English_teaching_Platform.html');
+    await page.waitForFunction(() => location.pathname === '/projects/English_teaching_Platform.html' && document.querySelectorAll('[data-rendered]').length === 5);
+    await page.goto(origin + '/index.html');
+    await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 8);
     // Fresh page: exercise per-field fallback and unavailable packs.
     testFallback = true;
     await page.evaluate(() => localStorage.setItem('portfolio-language', 'en'));

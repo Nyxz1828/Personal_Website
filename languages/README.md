@@ -8,6 +8,8 @@ Each folder contains `header.json`, `intro.json`, `about.json`, `education.json`
 `projects.json`, `notes.json`, `additional.json`, `footer.json`, and `fyp.json`.
 For example, edit `chinese/about.json` to update the Chinese About Me section.
 Edit `chinese/fyp.json` to update the Chinese final-year project detail page.
+Each folder also contains `english_teaching.json` for the English Teaching
+Platform project overview, video labels, and course materials section.
 
 Edit a component's language file to update it across every page using the shared
 renderer. Top-level keys match `data-i18n` in the component HTML. The `projects`
@@ -25,4 +27,4 @@ its code, folder name, selector label, and HTML language tag to `languages` in `
 The selector populates automatically from that registry. No renderer changes needed.
 
 Reload the page after editing a pack. Preview with a local web server, not `file://`.
-Both `index.html` and `home.html` use these component language packs.
+`index.html` and the project pages use these component language packs.

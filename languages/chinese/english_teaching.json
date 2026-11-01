@@ -1,0 +1,20 @@
+{
+  "teaching_title": "英語教學平台",
+  "teaching_description": "為學生、自學者與教師打造的協作式英語學習平台。透過結構化課程、學習資源與互動工具，支援單字、文法及語言理解能力的培養。簡潔介面與模組化元件整合外部資源、Google 文件及共享內容，建立集中的學習環境。",
+  "teaching_view_project": "查看完整專案 →",
+  "teaching_overview_title": "📚 專案概覽",
+  "teaching_overview": "英語教學平台是一項協作專案，將英語學習與教學資源整理成結構化的線上環境，整合學習工具與教材，支援學生、自學者及教師。",
+  "teaching_lessons": "集中管理結構化課程、文法參考資料與單字學習資源。",
+  "teaching_shared_resources": "整合 Google 文件與共享資源，支援教材的協作編輯。",
+  "teaching_interface": "以易用性、可讀性與有條理的學習流程為目標，設計簡潔介面。",
+  "teaching_modular": "採用模組化前端元件，方便未來擴充測驗、練習與互動課程。",
+  "teaching_usability": "系統重視簡潔與易用，讓學習者快速找到所需資源。透過整理筆記、協作內容與外部工具，建立集中的英語學習環境。",
+  "teaching_collaboration": "本專案由開發團隊共同完成，著重整理語言學習資源，並為課程進度追蹤、練習與互動教學工具建立可擴充的基礎。",
+  "teaching_collaborators": "協作者：",
+  "teaching_demo_title": "📺 示範影片",
+  "teaching_demo_description": "此預覽影片展示英語教學平台的主要功能、介面設計、導覽與使用流程範例。",
+  "teaching_demo_hint": "觀看短片，快速了解主要功能與視覺設計。",
+  "teaching_materials_title": "📚 英語教學理念與課程教材",
+  "teaching_materials_description": "了解我的教學理念、課程設計構想與結構化英語教材。內嵌文件會隨著修訂保持更新。",
+  "teaching_open_document": "開啟完整文件 →"
+}
