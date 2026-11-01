@@ -1,0 +1,132 @@
+[
+  {
+    "title": "ProBall Analytics",
+    "link": "FYP.html",
+    "image": "https://media.istockphoto.com/id/473559846/zh/%E7%85%A7%E7%89%87/baseball-player-in-stadium.jpg?s=612x612&w=0&k=20&c=Ydjmuoq6LWi3qDsLImCA8m6DcsSJLtNyIbsek86q2ao=",
+    "description": "A baseball analytics web app using HTML, JSON APIs, and JavaScript for CPBL data visualization.",
+    "tags": [
+      "HTML",
+      "JavaScript",
+      "CSS",
+      "API",
+      "JSON",
+      "Python"
+    ],
+    "translations": {
+      "zh": {
+        "title": "ProBall Analytics",
+        "description": "使用 HTML、JSON API 與 JavaScript 將 CPBL 資料視覺化的棒球分析網站。"
+      },
+      "jp": {
+        "title": "ProBall Analytics",
+        "description": "HTML、JSON API、JavaScript で CPBL データを可視化する野球分析 Web アプリ。"
+      }
+    }
+  },
+  {
+    "title": "Automated Customer Service System",
+    "link": "https://github.com/Nyxz1828/Realtime_VoiceChat_system_with_OpenAI_API",
+    "image": "https://static.vecteezy.com/system/resources/previews/023/849/958/original/customer-service-icon-in-flat-design-female-call-center-with-headphones-and-microphone-is-using-laptop-symbols-of-help-and-support-teams-png.png",
+    "description": "This project is a voice chat prototype built on the OpenAI Realtime API using WebRTC. It captures microphone audio, sends the SDP offer to the backend, and connects to OpenAI for real-time speech-to-speech interaction.",
+    "tags": [
+      "API",
+      "JavaScript",
+      "WebRTC",
+      "OpenAI"
+    ],
+    "translations": {
+      "zh": {
+        "title": "自動化客服系統",
+        "description": "透過 WebRTC 與 OpenAI Realtime API 建立的語音聊天原型。擷取麥克風音訊、將 SDP offer 傳送至後端，並連接 OpenAI 進行即時語音對話。"
+      },
+      "jp": {
+        "title": "自動カスタマーサービスシステム",
+        "description": "WebRTC と OpenAI Realtime API を使った音声チャットの試作。マイク音声を取得し、SDP オファーをバックエンドに送り、OpenAI とリアルタイムの音声対話を行います。"
+      }
+    }
+  },
+  {
+    "title": "Japanese Flashcards Widget",
+    "link": "https://github.com/Nyxz1828/Japanese-vocab-widget",
+    "image": "https://jlpt-apply.jfmo.org.ph/img/logo_big.png",
+    "description": "Personal project creating a JLPT learning game using Unity and C# for interactive language learning.",
+    "tags": [
+      "Unity",
+      "C#",
+      "Game Development"
+    ],
+    "translations": {
+      "zh": {
+        "title": "日語單字小工具",
+        "description": "使用 Unity 與 C# 開發的個人 JLPT 互動語言學習遊戲專案。"
+      },
+      "jp": {
+        "title": "日本語単語ウィジェット",
+        "description": "Unity と C# を使用した、対話型の日本語学習向け JLPT ゲームの個人プロジェクト。"
+      }
+    }
+  },
+  {
+    "title": "JLPT Learning Game (WIP)",
+    "link": "JLPT_Learning_Game.html",
+    "image": "https://jlpt-apply.jfmo.org.ph/img/logo_big.png",
+    "description": "Personal project creating a JLPT learning game using Unity and C# for interactive language learning.",
+    "tags": [
+      "Unity",
+      "C#",
+      "Game Development"
+    ],
+    "translations": {
+      "zh": {
+        "title": "JLPT 學習遊戲（開發中）",
+        "description": "使用 Unity 與 C# 開發的個人 JLPT 互動語言學習遊戲專案。"
+      },
+      "jp": {
+        "title": "JLPT 学習ゲーム（開発中）",
+        "description": "Unity と C# を使用した、対話型の日本語学習向け JLPT ゲームの個人プロジェクト。"
+      }
+    }
+  },
+  {
+    "title": "Reciept & Financial Management System (WIP)",
+    "link": "Financial_Management_System.html",
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/049/355/955/small_2x/receipt-icon-set-tax-payment-reciept-symbol-order-purchase-invoice-sign-credit-debt-bill-icon-in-black-filled-and-outlined-style-vector.jpg",
+    "description": "A bill splitting app with a financial dashboard by using tesseract OCR for receipt scanning and React for the frontend.",
+    "tags": [
+      "React",
+      "Full-Stack",
+      "tesseract OCR"
+    ],
+    "translations": {
+      "zh": {
+        "title": "收據與財務管理系統（開發中）",
+        "description": "使用 Tesseract OCR 掃描收據、React 建立前端，並提供財務儀表板的分帳應用程式。"
+      },
+      "jp": {
+        "title": "レシート・財務管理システム（開発中）",
+        "description": "Tesseract OCR によるレシート読み取りと React のフロントエンドを使い、財務ダッシュボードを備えた割り勘アプリ。"
+      }
+    }
+  },
+  {
+    "title": "English Teaching Platform",
+    "link": "English_teaching_Platform.html",
+    "image": "https://static.photos/abstract/640x360/3",
+    "description": "School project integrating Object-Oriented Programming and database synchronization.",
+    "tags": [
+      "React",
+      "Full-Stack",
+      "Supabase"
+    ],
+    "translations": {
+      "zh": {
+        "title": "英語教學平台",
+        "description": "整合物件導向程式設計與資料庫同步的學校專案。"
+      },
+      "jp": {
+        "title": "英語教育プラットフォーム",
+        "description": "オブジェクト指向プログラミングとデータベース同期を統合した学校のプロジェクト。"
+      }
+    }
+  }
+]
