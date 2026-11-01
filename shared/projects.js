@@ -1,4 +1,4 @@
-export async function initProjects(root, getLanguage, base) {
+export async function initProjects(root, getPack, base) {
   const track = root.querySelector("#projects-track");
   const slider = root.querySelector("#projects-slider");
   const nextBtn = root.querySelector("#nextBtn");
@@ -35,7 +35,7 @@ export async function initProjects(root, getLanguage, base) {
     track.innerHTML = "";
 
     projects.forEach((entry) => {
-      const project = { ...entry, ...(entry.translations?.[getLanguage()] || {}) };
+      const project = { ...entry, ...getPack().projects[entry.id] };
       const card = document.createElement("div");
       card.className = "w-full md:w-1/3 flex-shrink-0 p-4";
 

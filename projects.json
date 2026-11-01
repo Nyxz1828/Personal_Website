@@ -1,49 +1,72 @@
 [
   {
     "title": "ProBall Analytics",
-    "link": "FYP.html",
+    "link": "projects/FYP.html",
     "image": "https://media.istockphoto.com/id/473559846/zh/%E7%85%A7%E7%89%87/baseball-player-in-stadium.jpg?s=612x612&w=0&k=20&c=Ydjmuoq6LWi3qDsLImCA8m6DcsSJLtNyIbsek86q2ao=",
     "description": "A baseball analytics web app using HTML, JSON APIs, and JavaScript for CPBL data visualization.",
-    "tags": ["HTML", "JavaScript", "CSS", "API", "JSON", "Python"]
+    "tags": [
+      "HTML",
+      "JavaScript",
+      "CSS",
+      "API",
+      "JSON",
+      "Python"
+    ]
   },
   {
     "title": "Automated Customer Service System",
     "link": "https://github.com/Nyxz1828/Realtime_VoiceChat_system_with_OpenAI_API",
     "image": "https://static.vecteezy.com/system/resources/previews/023/849/958/original/customer-service-icon-in-flat-design-female-call-center-with-headphones-and-microphone-is-using-laptop-symbols-of-help-and-support-teams-png.png",
     "description": "This project is a voice chat prototype built on the OpenAI Realtime API using WebRTC. It captures microphone audio, sends the SDP offer to the backend, and connects to OpenAI for real-time speech-to-speech interaction.",
-    "tags": ["API", "JavaScript", "WebRTC", "OpenAI"]
-  }
-  ,
-    {
+    "tags": [
+      "API",
+      "JavaScript",
+      "WebRTC",
+      "OpenAI"
+    ]
+  },
+  {
     "title": "Japanese Flashcards Widget",
     "link": "https://github.com/Nyxz1828/Japanese-vocab-widget",
     "image": "https://jlpt-apply.jfmo.org.ph/img/logo_big.png",
     "description": "Personal project creating a JLPT learning game using Unity and C# for interactive language learning.",
-    "tags": ["Unity", "C#", "Game Development"]
-  }
-  ,
-
-
-    {
+    "tags": [
+      "Unity",
+      "C#",
+      "Game Development"
+    ]
+  },
+  {
     "title": "JLPT Learning Game (WIP)",
     "link": "JLPT_Learning_Game.html",
     "image": "https://jlpt-apply.jfmo.org.ph/img/logo_big.png",
     "description": "Personal project creating a JLPT learning game using Unity and C# for interactive language learning.",
-    "tags": ["Unity", "C#", "Game Development"]
-  }
-  ,
-    {
+    "tags": [
+      "Unity",
+      "C#",
+      "Game Development"
+    ]
+  },
+  {
     "title": "Reciept & Financial Management System (WIP)",
     "link": "Financial_Management_System.html",
     "image": "https://static.vecteezy.com/system/resources/thumbnails/049/355/955/small_2x/receipt-icon-set-tax-payment-reciept-symbol-order-purchase-invoice-sign-credit-debt-bill-icon-in-black-filled-and-outlined-style-vector.jpg",
     "description": "A bill splitting app with a financial dashboard by using tesseract OCR for receipt scanning and React for the frontend.",
-    "tags": ["React", "Full-Stack", "tesseract OCR"]
+    "tags": [
+      "React",
+      "Full-Stack",
+      "tesseract OCR"
+    ]
   },
   {
     "title": "English Teaching Platform",
     "link": "English_teaching_Platform.html",
     "image": "https://static.photos/abstract/640x360/3",
     "description": "School project integrating Object-Oriented Programming and database synchronization.",
-    "tags": ["React", "Full-Stack", "Supabase"]
+    "tags": [
+      "React",
+      "Full-Stack",
+      "Supabase"
+    ]
   }
-]   
+]

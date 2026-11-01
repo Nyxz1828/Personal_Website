@@ -1,0 +1,18 @@
+{
+  "school_archive": "📁 校內筆記與專案資料庫",
+  "Notion_Notes": "Notion 筆記",
+  "Notions_descriptions": "大學期間的個人筆記與作業紀錄",
+  "Notion_point1": "程式語言",
+  "Notion_point2": "人工智慧相關",
+  "Notion_point3": "全端開發",
+  "Google_colab": "Google Colab 筆記",
+  "Google_Colab_descriptions": "包含以下類型的 Colab 程式碼：",
+  "Colab_point1": "Google Script",
+  "Colab_point2": "自然語言處理",
+  "Colab_point3": "個人作品",
+  "Github": "GitHub",
+  "Github_description": "部分專案儲存在此處，較舊的專案通常保存在 Notion 或 Colab。",
+  "Github_point1": "物聯網",
+  "Github_point2": "全端開發",
+  "Github_point3": "APP 開發"
+}

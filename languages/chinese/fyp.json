@@ -1,0 +1,16 @@
+{
+  "fyp_title": "ProBall Analytics",
+  "fyp_description": "專為中華職棒球迷、球探與分析師設計的完整棒球分析儀表板。功能包括即時資料擷取、動態統計頁面、球員趨勢、API 整合與進階資料視覺化。採用模組化前端元件與最佳化 JSON 資料流程，加快載入速度。",
+  "fyp_view_demo": "觀看示範 →",
+  "fyp_overview_title": "📊 專案概覽",
+  "fyp_overview": "ProBall Analytics 是一項長期開發計畫，目標是建立完整的中華職棒資訊系統。平台整合了多個系統：",
+  "fyp_pipeline": "使用 Python 建立靜態資料處理流程（XML → JSON → Supabase）。",
+  "fyp_scraping": "動態資料擷取引擎，提供即時對戰資訊與球員更新。",
+  "fyp_frontend": "以模組化 JavaScript、可重用介面設計與效能最佳化渲染建立完整前端架構。",
+  "fyp_visualizations": "資料視覺化包含趨勢圖、直方圖與比較圖表。",
+  "fyp_scalability": "系統以可擴展性為設計重點，支援未來發展成行動應用程式、AI 聊天助理與預測模型。本專案透過資料流程、自動化與 API 路由展現工程深度，並以簡潔介面維持一致的設計。",
+  "fyp_goal": "可透過專案頁面了解開發進度、示範與詳細文件。目標是打造大學階段最完整的獨立中華職棒分析平台之一。",
+  "fyp_demo_title": "📺 示範影片",
+  "fyp_demo_description": "此影片展示 ProBall Analytics 專案預覽，包括介面導覽、資料視覺化與使用流程範例。",
+  "fyp_demo_hint": "觀看短片，快速了解主要功能與視覺設計。"
+}

@@ -1,0 +1,37 @@
+{
+  "past_project": "Projects",
+  "previous": "Prev",
+  "next": "Next",
+  "PJ1": "ProBall Analytics",
+  "PJ1_description": "A baseball analytics web app using HTML, JSON APIs, and JavaScript for CPBL data visualization.",
+  "PJ2": "Will Be Updated",
+  "PJ2_description": "Custom chatbot built using Node.js, OpenAI API, and Tailwind for UI integration.",
+  "PJ3": "Automated Warehouse System",
+  "PJ3_description": "Capstone project integrating AGV control, data monitoring, and database synchronization.",
+  "projects": {
+    "proball": {
+      "title": "ProBall Analytics",
+      "description": "A baseball analytics web app using HTML, JSON APIs, and JavaScript for CPBL data visualization."
+    },
+    "customer-service": {
+      "title": "Automated Customer Service System",
+      "description": "This project is a voice chat prototype built on the OpenAI Realtime API using WebRTC. It captures microphone audio, sends the SDP offer to the backend, and connects to OpenAI for real-time speech-to-speech interaction."
+    },
+    "japanese-widget": {
+      "title": "Japanese Flashcards Widget",
+      "description": "Personal project creating a JLPT learning game using Unity and C# for interactive language learning."
+    },
+    "jlpt-game": {
+      "title": "JLPT Learning Game (WIP)",
+      "description": "Personal project creating a JLPT learning game using Unity and C# for interactive language learning."
+    },
+    "financial-management": {
+      "title": "Reciept & Financial Management System (WIP)",
+      "description": "A bill splitting app with a financial dashboard by using tesseract OCR for receipt scanning and React for the frontend."
+    },
+    "english-teaching": {
+      "title": "English Teaching Platform",
+      "description": "School project integrating Object-Oriented Programming and database synchronization."
+    }
+  }
+}

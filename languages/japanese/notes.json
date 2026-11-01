@@ -1,0 +1,18 @@
+{
+  "school_archive": "📁 学習ノート & プロジェクトアーカイブ",
+  "Notion_Notes": "Notion ノート",
+  "Notions_descriptions": "大学時代の個人ノートおよび課題記録",
+  "Notion_point1": "プログラミング言語",
+  "Notion_point2": "AI 関連",
+  "Notion_point3": "フルスタック開発",
+  "Google_colab": "Google Colab ノート",
+  "Google_Colab_descriptions": "以下を含む Colab コード：",
+  "Colab_point1": "Google Scripts",
+  "Colab_point2": "自然言語処理（NLP）",
+  "Colab_point3": "個人作品",
+  "Github": "GitHub",
+  "Github_description": "いくつかのリポジトリがここに保存されています。過去のプロジェクトは Notion または Colab に保管している場合があります。",
+  "Github_point1": "IoT",
+  "Github_point2": "フルスタック開発",
+  "Github_point3": "アプリ開発"
+}

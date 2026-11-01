@@ -1,0 +1,37 @@
+{
+  "past_project": "過去のプロジェクト",
+  "previous": "前へ",
+  "next": "次へ",
+  "PJ1": "ProBall Analytics",
+  "PJ1_description": "HTML、JSON API、JavaScript を使用し、CPBL データを可視化するための野球分析 Web アプリ。",
+  "PJ2": "後日更新予定",
+  "PJ2_description": "Node.js、OpenAI API、Tailwind を用いて構築したカスタムチャットボット。",
+  "PJ3": "自動倉庫システム",
+  "PJ3_description": "AGV 制御、データ監視、データベース同期を統合した卒業プロジェクト。",
+  "projects": {
+    "proball": {
+      "title": "ProBall Analytics",
+      "description": "HTML、JSON API、JavaScript で CPBL データを可視化する野球分析 Web アプリ。"
+    },
+    "customer-service": {
+      "title": "自動カスタマーサービスシステム",
+      "description": "WebRTC と OpenAI Realtime API を使った音声チャットの試作。マイク音声を取得し、SDP オファーをバックエンドに送り、OpenAI とリアルタイムの音声対話を行います。"
+    },
+    "japanese-widget": {
+      "title": "日本語単語ウィジェット",
+      "description": "Unity と C# を使用した、対話型の日本語学習向け JLPT ゲームの個人プロジェクト。"
+    },
+    "jlpt-game": {
+      "title": "JLPT 学習ゲーム（開発中）",
+      "description": "Unity と C# を使用した、対話型の日本語学習向け JLPT ゲームの個人プロジェクト。"
+    },
+    "financial-management": {
+      "title": "レシート・財務管理システム（開発中）",
+      "description": "Tesseract OCR によるレシート読み取りと React のフロントエンドを使い、財務ダッシュボードを備えた割り勘アプリ。"
+    },
+    "english-teaching": {
+      "title": "英語教育プラットフォーム",
+      "description": "オブジェクト指向プログラミングとデータベース同期を統合した学校のプロジェクト。"
+    }
+  }
+}

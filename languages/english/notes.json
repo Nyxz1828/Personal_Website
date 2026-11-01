@@ -1,0 +1,18 @@
+{
+  "school_archive": "📁 Schools Notes & Projects Archive ",
+  "Notion_Notes": "Notions Notes",
+  "Notions_descriptions": " Personal notes and past homework from school during University",
+  "Notion_point1": "Programming languages",
+  "Notion_point2": "AI related",
+  "Notion_point3": "Full-Stack",
+  "Google_colab": "Google Colab Notes",
+  "Google_Colab_descriptions": "Google Colabs Codes which includes",
+  "Colab_point1": "Google Scripts",
+  "Colab_point2": "NLP",
+  "Colab_point3": "Personal Works",
+  "Github": "GitHub",
+  "Github_description": "Some respository are being stored here. Past-project if kept are usually in notions or Colab",
+  "Github_point1": "IoT",
+  "Github_point2": "MySQL",
+  "Github_point3": "C++"
+}

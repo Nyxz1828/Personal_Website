@@ -1,0 +1,37 @@
+{
+  "past_project": "過往專案",
+  "previous": "上一頁",
+  "next": "下一頁",
+  "PJ1": "ProBall Analytics",
+  "PJ1_description": "使用 HTML、JSON API 與 JavaScript 製作的 CPBL 資料視覺化棒球分析平台。",
+  "PJ2": "之後更新",
+  "PJ2_description": "以 Node.js、OpenAI API 與 Tailwind 打造的自訂聊天機器人。",
+  "PJ3": "自動化倉儲系統",
+  "PJ3_description": "整合 AGV 控制、資料監控與資料庫同步的畢業專題。",
+  "projects": {
+    "proball": {
+      "title": "ProBall Analytics",
+      "description": "使用 HTML、JSON API 與 JavaScript 將 CPBL 資料視覺化的棒球分析網站。"
+    },
+    "customer-service": {
+      "title": "自動化客服系統",
+      "description": "透過 WebRTC 與 OpenAI Realtime API 建立的語音聊天原型。擷取麥克風音訊、將 SDP offer 傳送至後端，並連接 OpenAI 進行即時語音對話。"
+    },
+    "japanese-widget": {
+      "title": "日語單字小工具",
+      "description": "使用 Unity 與 C# 開發的個人 JLPT 互動語言學習遊戲專案。"
+    },
+    "jlpt-game": {
+      "title": "JLPT 學習遊戲（開發中）",
+      "description": "使用 Unity 與 C# 開發的個人 JLPT 互動語言學習遊戲專案。"
+    },
+    "financial-management": {
+      "title": "收據與財務管理系統（開發中）",
+      "description": "使用 Tesseract OCR 掃描收據、React 建立前端，並提供財務儀表板的分帳應用程式。"
+    },
+    "english-teaching": {
+      "title": "英語教學平台",
+      "description": "整合物件導向程式設計與資料庫同步的學校專案。"
+    }
+  }
+}

@@ -1,14 +1,13 @@
 import { initProjects } from './projects.js';
+import { languages, loadLanguage, componentNames } from './i18n.js';
 
 const base = new URL('../', import.meta.url);
-const components = new Set(['header', 'intro', 'about', 'education', 'projects', 'notes', 'additional', 'footer']);
+const components = new Set(componentNames);
 const templates = new Map();
-const dictionaries = fetch(new URL('shared/translations.json', base)).then(response => {
-  if (!response.ok) throw new Error('Unable to load translations');
-  return response.json();
-});
 let language = readPreference('portfolio-language', 'en');
-if (!['en', 'zh', 'jp'].includes(language)) language = 'en';
+if (!Object.hasOwn(languages, language)) language = 'en';
+let pack;
+let languageRequest = 0;
 
 function readPreference(key, fallback) {
   try { return localStorage.getItem(key) || fallback; } catch { return fallback; }
@@ -35,12 +34,14 @@ function forestText(parent, text) {
 }
 
 async function translate(root) {
-  const pack = (await dictionaries)[language];
   root.querySelectorAll('[data-i18n]').forEach(element => {
     if (pack[element.dataset.i18n] !== undefined) element.textContent = pack[element.dataset.i18n];
   });
   root.querySelectorAll('[data-i18n-aria]').forEach(element => {
     element.setAttribute('aria-label', pack[element.dataset.i18nAria]);
+  });
+  root.querySelectorAll('[data-i18n-title]').forEach(element => {
+    if (pack[element.dataset.i18nTitle] !== undefined) element.title = pack[element.dataset.i18nTitle];
   });
   root.querySelectorAll('#Self_into_text').forEach(intro => {
     intro.replaceChildren();
@@ -52,16 +53,38 @@ async function translate(root) {
     forestText(name, pack.name_text);
     intro.append(name);
   });
-  root.querySelectorAll('#languageSelect').forEach(select => { select.value = language; });
+  root.querySelectorAll('#languageSelect').forEach(select => {
+    select.replaceChildren(...Object.entries(languages).map(([code, metadata]) => {
+      const option = document.createElement('option');
+      option.value = code;
+      option.textContent = metadata.label;
+      return option;
+    }));
+    select.value = language;
+  });
 }
 
 export async function setLanguage(nextLanguage) {
-  if (!['en', 'zh', 'jp'].includes(nextLanguage)) return;
+  if (!Object.hasOwn(languages, nextLanguage)) return;
+  const request = ++languageRequest;
+  let nextPack;
+  try {
+    nextPack = await loadLanguage(nextLanguage);
+  } catch (error) {
+    if (request === languageRequest) {
+      document.querySelectorAll('#languageSelect').forEach(select => { select.value = language; });
+    }
+    console.error(error);
+    return false;
+  }
+  if (request !== languageRequest) return false;
+  pack = nextPack;
   language = nextLanguage;
   savePreference('portfolio-language', language);
-  document.documentElement.lang = { en: 'en', zh: 'zh-Hant', jp: 'ja' }[language];
+  document.documentElement.lang = languages[language].htmlLang;
   await translate(document);
   document.dispatchEvent(new CustomEvent('portfolio:language', { detail: language }));
+  return true;
 }
 
 function refreshTheme() {
@@ -98,10 +121,10 @@ export async function renderComponents(root = document) {
         if (document.querySelector('[data-component="' + link.dataset.homeAnchor + '"]')) {
           link.href = '#' + link.dataset.homeAnchor;
         } else {
-          link.href = new URL(`home.html#${link.dataset.homeAnchor}`, base).href;
+          link.href = new URL(`index.html#${link.dataset.homeAnchor}`, base).href;
         }
       }
-      await initProjects(target, () => language, base);
+      await initProjects(target, () => pack, base);
       target.dataset.rendered = 'true';
     } catch (error) {
       target.textContent = 'Unable to load this section. 無法載入此區塊。読み込めませんでした。';
@@ -109,7 +132,7 @@ export async function renderComponents(root = document) {
       console.error(error);
     }
   }));
-  document.documentElement.lang = { en: 'en', zh: 'zh-Hant', jp: 'ja' }[language];
+  document.documentElement.lang = languages[language].htmlLang;
   refreshTheme();
   // Sections are fetched after the browser's initial fragment navigation.
   if (location.hash) document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
@@ -125,4 +148,11 @@ document.addEventListener('click', event => {
   refreshTheme();
 });
 document.documentElement.classList.toggle('dark', readPreference('portfolio-theme', 'dark') === 'dark');
+try {
+  pack = await loadLanguage(language);
+} catch (error) {
+  console.error(error);
+  language = 'en';
+  pack = await loadLanguage(language);
+}
 await renderComponents();
