@@ -12,5 +12,8 @@
   "fyp_goal": "You can explore progress updates, demos, and detailed documentation through the project page. The goal is to provide one of the most complete independent CPBL analytics platforms built at a university level.",
   "fyp_demo_title": "📺 Demo Video",
   "fyp_demo_description": "This video demonstrates a preview showcase of the ProBall Analytics project, including UI navigation, data visualization, and user workflow examples.",
-  "fyp_demo_hint": "Watch the clip to get a quick overview of the main features and visual design."
+  "fyp_demo_hint": "Watch the clip to get a quick overview of the main features and visual design.",
+  "fyp_documentation_title": "FYP Project Documentation",
+  "fyp_documentation_description": "Explore the ProBall Analytics final year project documentation. The embedded document stays up to date as I revise it.",
+  "fyp_open_document": "Open Full Document →"
 }

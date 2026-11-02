@@ -12,5 +12,8 @@
   "fyp_goal": "プロジェクトページで開発状況、デモ、詳細な資料を確認できます。大学で開発された独立系 CPBL 分析プラットフォームの中でも、特に充実したシステムを目指しています。",
   "fyp_demo_title": "📺 デモ動画",
   "fyp_demo_description": "ProBall Analytics の画面操作、データ可視化、利用の流れを紹介するプレビュー動画です。",
-  "fyp_demo_hint": "主な機能と画面デザインを短い動画で確認できます。"
+  "fyp_demo_hint": "主な機能と画面デザインを短い動画で確認できます。",
+  "fyp_documentation_title": "卒業研究プロジェクト資料",
+  "fyp_documentation_description": "ProBall Analytics の卒業研究プロジェクト資料をご覧ください。埋め込まれた資料には、随時最新の修正が反映されます。",
+  "fyp_open_document": "資料全体を開く →"
 }

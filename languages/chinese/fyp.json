@@ -12,5 +12,8 @@
   "fyp_goal": "可透過專案頁面了解開發進度、示範與詳細文件。目標是打造大學階段最完整的獨立中華職棒分析平台之一。",
   "fyp_demo_title": "📺 示範影片",
   "fyp_demo_description": "此影片展示 ProBall Analytics 專案預覽，包括介面導覽、資料視覺化與使用流程範例。",
-  "fyp_demo_hint": "觀看短片，快速了解主要功能與視覺設計。"
+  "fyp_demo_hint": "觀看短片，快速了解主要功能與視覺設計。",
+  "fyp_documentation_title": "畢業專題文件",
+  "fyp_documentation_description": "瀏覽 ProBall Analytics 畢業專題文件。內嵌文件會隨著我的修訂保持更新。",
+  "fyp_open_document": "開啟完整文件 →"
 }
