@@ -1,6 +1,6 @@
 [
   {
-    "title": "ProBall Analytics",
+    "title": "Baseball Analysis",
     "link": "projects/FYP.html",
     "image": "https://media.istockphoto.com/id/473559846/zh/%E7%85%A7%E7%89%87/baseball-player-in-stadium.jpg?s=612x612&w=0&k=20&c=Ydjmuoq6LWi3qDsLImCA8m6DcsSJLtNyIbsek86q2ao=",
     "description": "A baseball analytics web app using HTML, JSON APIs, and JavaScript for CPBL data visualization.",
@@ -67,6 +67,21 @@
       "React",
       "Full-Stack",
       "Supabase"
+    ]
+  },
+  {
+    "title": "Globe Gallery",
+    "link": "projects/Globe_Gallery.html",
+    "image": "shared/globe-gallery.svg",
+    "description": "A personal web development project combining photography, location tagging, and interactive 3D visualization. Capture or upload photos and turn travel memories into explorable markers on a globe.",
+    "tags": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Supabase",
+      "IndexedDB",
+      "WebGL",
+      "Geolocation API"
     ]
   }
 ]

@@ -2,15 +2,19 @@
   "past_project": "過往專案",
   "previous": "上一頁",
   "next": "下一頁",
-  "PJ1": "ProBall Analytics",
+  "PJ1": "Baseball Analysis",
   "PJ1_description": "使用 HTML、JSON API 與 JavaScript 製作的 CPBL 資料視覺化棒球分析平台。",
   "PJ2": "之後更新",
   "PJ2_description": "以 Node.js、OpenAI API 與 Tailwind 打造的自訂聊天機器人。",
   "PJ3": "自動化倉儲系統",
   "PJ3_description": "整合 AGV 控制、資料監控與資料庫同步的畢業專題。",
   "projects": {
+    "globe-gallery": {
+      "title": "Globe Gallery",
+      "description": "結合攝影、地點標記與互動式 3D 視覺化的個人網頁開發專案。拍攝或上傳相片，將旅行回憶轉化為地球上的互動標記。"
+    },
     "proball": {
-      "title": "ProBall Analytics",
+      "title": "Baseball Analysis",
       "description": "使用 HTML、JSON API 與 JavaScript 將 CPBL 資料視覺化的棒球分析網站。"
     },
     "customer-service": {

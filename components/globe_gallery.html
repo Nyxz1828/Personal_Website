@@ -1,0 +1,34 @@
+<section id="globe-gallery" class="bg-transparent dark:bg-gray-800 py-16">
+<div class="max-w-6xl mx-auto px-6">
+<h2 class="text-3xl font-bold mb-12 text-center" data-i18n="globe_title">Globe Gallery — Interactive 3D Photo & Travel Memory Website</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<article class="rounded-xl overflow-hidden shadow-lg card-hover bg-gray-50 dark:bg-gray-700">
+<img src="../shared/globe-gallery.svg" alt="Globe Gallery" class="w-full h-40 object-cover">
+<div class="p-5"><h3 class="text-xl font-semibold mb-2">Globe Gallery</h3>
+<p class="text-sm mb-3 text-gray-600 dark:text-gray-300" data-i18n="globe_description">A personal web development project combining photography, location tagging, and interactive 3D visualization. Capture or upload photos and turn travel memories into explorable markers on a globe.</p>
+<div class="flex flex-wrap gap-2 mb-3"><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">JavaScript</span><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">HTML</span><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">CSS</span><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Supabase</span><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">IndexedDB</span><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">WebGL</span><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Geolocation API</span></div><a href="https://github.com/Nyxz1828/Globe_Gallery" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-300 hover:underline font-medium" data-i18n="globe_github">View on GitHub &#8594;</a></div></article>
+<article class="md:col-span-2 rounded-xl shadow-lg p-8 bg-gray-50 dark:bg-gray-700 card-hover">
+<h3 class="text-2xl font-semibold mb-4" data-i18n="globe_overview_title">Project Overview</h3><p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" data-i18n="globe_overview">Globe Gallery connects a searchable photo gallery with an interactive 3D globe. Each memory brings together a photo, caption, date, place name, and geographic coordinates, making personal experiences easy to revisit through either images or locations.</p><p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" data-i18n="globe_goal">The project demonstrates browser API integration, structured local data management, and an interactive interface that connects visual content with geographic context.</p>
+<h3 class="text-xl font-semibold mb-4" data-i18n="globe_features_title">Key Features</h3>
+<ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-300"><li class="" data-i18n="globe_feature_globe">Interactive 3D globe: explore geographic markers and select a location to revisit its associated memories.</li>
+<li class="" data-i18n="globe_feature_gallery">Searchable photo gallery: browse dated memories and find photos using captions and place names.</li>
+<li class="" data-i18n="globe_feature_camera">Camera capture and uploads: take photos with a countdown and front/rear camera switching, or import existing images.</li>
+<li class="" data-i18n="globe_feature_gps">GPS tagging: attach the current location through the Geolocation API or enter place names and coordinates manually.</li>
+<li class="" data-i18n="globe_feature_storage">Data storage: Supabase provides the project database, with IndexedDB supporting local photo storage in the browser.</li>
+<li class="" data-i18n="globe_feature_backup">Backup management: export and import complete JSON backups, and download individual photos.</li></ul>
+</article></div>
+<article class="rounded-xl shadow-lg p-8 mt-8 bg-gray-50 dark:bg-gray-700">
+<h3 class="text-2xl font-semibold mb-4" data-i18n="globe_technical_title">Technical Details</h3>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" data-i18n="globe_technical_frontend">Frontend: HTML, CSS, and JavaScript provide a responsive interface for capturing, organizing, and exploring memories on desktop and mobile.</p>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" data-i18n="globe_technical_visualization">Visualization: a WebGL-based 3D globe library connects latitude and longitude coordinates to interactive memory markers.</p>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" data-i18n="globe_technical_storage">Data management: Supabase serves as the database for project data, while IndexedDB supports browser-local photo storage. JSON export/import provides backup management.</p>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" data-i18n="globe_technical_apis">Browser integration: camera access and the Geolocation API support photo capture and optional GPS detection. These features require user permission and HTTPS or localhost.</p>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" data-i18n="globe_technical_scope">Connectivity: Supabase database access and the CDN-hosted globe library and Earth texture require an internet connection.</p>
+</article></div></section>
+<section id="globe-gallery-demo" class="max-w-6xl mx-auto px-6 mb-16">
+<div class="rounded-xl overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-700 p-5 flex flex-col md:flex-row gap-6 card-hover">
+<div class="w-full md:w-2/3 rounded-xl overflow-hidden aspect-video">
+<iframe class="w-full h-full" src="https://www.youtube.com/embed/QHWPLBV68WQ" title="Demo Video" data-i18n-title="globe_demo_title" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div><div class="w-full md:w-1/3 flex flex-col justify-center">
+<h3 class="text-xl font-semibold mb-2" data-i18n="globe_demo_title">Demo Video</h3><p class="text-sm text-gray-600 dark:text-gray-300" data-i18n="globe_demo_description">A walkthrough of photo capture, location tagging, globe exploration, gallery search, and backup management.</p>
+<div class="mt-4"><a href="https://github.com/Nyxz1828/Globe_Gallery" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-300 hover:underline font-medium" data-i18n="globe_github">View on GitHub &#8594;</a></div></div></div></section>

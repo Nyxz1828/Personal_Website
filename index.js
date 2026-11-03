@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Degree_info: "Bachelor Degree in  Information Engineering and Computer Science",
       Degree_year_location: "2022 – 2026 • Taichung, Taiwan",
       Degree_focus: "• Focus: Embedded Systems, Data Analytics, Web Engineering",
-      Degree_Fyp: "• Final Year Project: ProBall Analytics — A Baseball Analytics Website with Web Scraping and Data Analysis",
+      Degree_Fyp: "• Final Year Project: Baseball Analysis — A Baseball Analytics Website with Web Scraping and Data Analysis",
       High_School_School: "Han Chiang High School",
       Hc_stream: "Science Stream",
       hc_yr_loc: "2016 – 2021 • Penang, Malaysia",
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       // past projects
       past_project: "Past Projects",
-      PJ1: "ProBall Analytics",
+      PJ1: "Baseball Analysis",
       PJ1_description: "A baseball analytics web app using HTML, JSON APIs, and JavaScript for CPBL data visualization.",
       PJ2: "Will Be Updated", 
       PJ2_description: "Custom chatbot built using Node.js, OpenAI API, and Tailwind for UI integration.",
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Degree_info: "資訊工程學系 學士學位",
       Degree_year_location: "2022 – 2026 • 台中，台灣",
       Degree_focus: "• 主修方向：嵌入式系統、資料分析、網頁工程",
-      Degree_Fyp: "• 畢業專題：ProBall Analytics — 結合網頁爬蟲與資料分析的棒球數據網站",
+      Degree_Fyp: "• 畢業專題：Baseball Analysis — 結合網頁爬蟲與資料分析的棒球數據網站",
       High_School_School: "韓江中學",
       Hc_stream: "理科班",
       hc_yr_loc: "2016 – 2021 • 檳城，馬來西亞",
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Past Projects
       past_project: "過往專案",
-      PJ1: "ProBall Analytics",
+      PJ1: "Baseball Analysis",
       PJ1_description: "使用 HTML、JSON API 與 JavaScript 製作的 CPBL 資料視覺化棒球分析平台。",
       PJ2: "之後更新",
       PJ2_description: "以 Node.js、OpenAI API 與 Tailwind 打造的自訂聊天機器人。",
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
         Degree_info: "情報工学・コンピュータサイエンス 学士号",
         Degree_year_location: "2022 – 2026 • 台湾・台中",
         Degree_focus: "• 専門分野：組込みシステム、データ分析、Web エンジニアリング",
-        Degree_Fyp: "• 卒業研究：ProBall Analytics — Webスクレイピングとデータ分析を活用した野球データ分析サイト",
+        Degree_Fyp: "• 卒業研究：Baseball Analysis — Webスクレイピングとデータ分析を活用した野球データ分析サイト",
         High_School_School: "ハンチェン高校（Han Chiang High School）",
         Hc_stream: "サイエンスストリーム（理系）",
         hc_yr_loc: "2016 – 2021 • マレーシア・ペナン",
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Past Projects
         past_project: "過去のプロジェクト",
-        PJ1: "ProBall Analytics",
+        PJ1: "Baseball Analysis",
         PJ1_description: "HTML、JSON API、JavaScript を使用し、CPBL データを可視化するための野球分析 Web アプリ。",
         PJ2: "後日更新予定",
         PJ2_description: "Node.js、OpenAI API、Tailwind を用いて構築したカスタムチャットボット。",

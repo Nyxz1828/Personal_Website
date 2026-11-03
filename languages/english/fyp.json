@@ -1,9 +1,9 @@
 {
-  "fyp_title": "ProBall Analytics",
+  "fyp_title": "Baseball Analysis",
   "fyp_description": "A full baseball analytics dashboard designed for CPBL fans, scouts, and analysts. Features include real-time scraping, dynamic statistics pages, player trends, API integration, and advanced data visualization. Built with modular front-end components and optimized JSON pipelines for fast loading.",
   "fyp_view_demo": "View Demo →",
   "fyp_overview_title": "📊 Project Overview",
-  "fyp_overview": "ProBall Analytics is a long-term development initiative focusing on building a complete baseball information system for CPBL. The platform integrates multiple systems:",
+  "fyp_overview": "Baseball Analysis is a long-term development initiative focusing on building a complete baseball information system for CPBL. The platform integrates multiple systems:",
   "fyp_pipeline": "Static data processing pipeline using Python (XML → JSON → Supabase).",
   "fyp_scraping": "Dynamic scraping engine for real-time matchup and player updates.",
   "fyp_frontend": "Full front-end architecture built with modular JavaScript, reusable UI patterns, and performance-optimized rendering.",
@@ -11,9 +11,9 @@
   "fyp_scalability": "The system is designed for scalability, supporting future expansion into mobile apps, AI-driven chat assistants, and predictive models. This project showcases both engineering depth—data pipelines, automation, API routes—and design consistency through a clean user interface.",
   "fyp_goal": "You can explore progress updates, demos, and detailed documentation through the project page. The goal is to provide one of the most complete independent CPBL analytics platforms built at a university level.",
   "fyp_demo_title": "📺 Demo Video",
-  "fyp_demo_description": "This video demonstrates a preview showcase of the ProBall Analytics project, including UI navigation, data visualization, and user workflow examples.",
+  "fyp_demo_description": "This video demonstrates a preview showcase of the Baseball Analysis project, including UI navigation, data visualization, and user workflow examples.",
   "fyp_demo_hint": "Watch the clip to get a quick overview of the main features and visual design.",
   "fyp_documentation_title": "FYP Project Documentation",
-  "fyp_documentation_description": "Explore the ProBall Analytics final year project documentation. The embedded document stays up to date as I revise it.",
+  "fyp_documentation_description": "Explore the Baseball Analysis final year project documentation. The embedded document stays up to date as I revise it.",
   "fyp_open_document": "Open Full Document →"
 }

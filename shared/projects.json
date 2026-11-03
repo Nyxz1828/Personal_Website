@@ -62,5 +62,19 @@
       "Full-Stack",
       "Supabase"
     ]
+  },
+  {
+    "id": "globe-gallery",
+    "link": "projects/Globe_Gallery.html",
+    "image": "shared/globe-gallery.svg",
+    "tags": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Supabase",
+      "IndexedDB",
+      "WebGL",
+      "Geolocation API"
+    ]
   }
 ]

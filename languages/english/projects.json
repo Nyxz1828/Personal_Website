@@ -2,15 +2,19 @@
   "past_project": "Projects",
   "previous": "Prev",
   "next": "Next",
-  "PJ1": "ProBall Analytics",
+  "PJ1": "Baseball Analysis",
   "PJ1_description": "A baseball analytics web app using HTML, JSON APIs, and JavaScript for CPBL data visualization.",
   "PJ2": "Will Be Updated",
   "PJ2_description": "Custom chatbot built using Node.js, OpenAI API, and Tailwind for UI integration.",
   "PJ3": "Automated Warehouse System",
   "PJ3_description": "Capstone project integrating AGV control, data monitoring, and database synchronization.",
   "projects": {
+    "globe-gallery": {
+      "title": "Globe Gallery",
+      "description": "A personal web development project combining photography, location tagging, and interactive 3D visualization. Capture or upload photos and turn travel memories into explorable markers on a globe."
+    },
     "proball": {
-      "title": "ProBall Analytics",
+      "title": "Baseball Analysis",
       "description": "A baseball analytics web app using HTML, JSON APIs, and JavaScript for CPBL data visualization."
     },
     "customer-service": {

@@ -2,15 +2,19 @@
   "past_project": "過去のプロジェクト",
   "previous": "前へ",
   "next": "次へ",
-  "PJ1": "ProBall Analytics",
+  "PJ1": "Baseball Analysis",
   "PJ1_description": "HTML、JSON API、JavaScript を使用し、CPBL データを可視化するための野球分析 Web アプリ。",
   "PJ2": "後日更新予定",
   "PJ2_description": "Node.js、OpenAI API、Tailwind を用いて構築したカスタムチャットボット。",
   "PJ3": "自動倉庫システム",
   "PJ3_description": "AGV 制御、データ監視、データベース同期を統合した卒業プロジェクト。",
   "projects": {
+    "globe-gallery": {
+      "title": "Globe Gallery",
+      "description": "写真、位置情報、インタラクティブな 3D 可視化を組み合わせた個人 Web 開発プロジェクトです。撮影・アップロードした写真を地球上のマーカーとして表示し、旅の思い出を探索できます。"
+    },
     "proball": {
-      "title": "ProBall Analytics",
+      "title": "Baseball Analysis",
       "description": "HTML、JSON API、JavaScript で CPBL データを可視化する野球分析 Web アプリ。"
     },
     "customer-service": {

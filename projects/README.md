@@ -9,9 +9,9 @@ project overview, collaborator links, video, and course document. Edit the
 and footer share the same components as the index and FYP pages.
 The original root URL redirects to this page.
 
-## ProBall Analytics
+## Baseball Analysis
 
-`FYP.html` renders the ProBall Analytics final-year project using the shared
+`FYP.html` renders the Baseball Analysis final-year project using the shared
 component system. Its page content and video live in `components/fyp.html`.
 Edit its translations in `languages/english/fyp.json`,
 `languages/chinese/fyp.json`, and `languages/japanese/fyp.json`.
