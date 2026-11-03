@@ -157,6 +157,22 @@ const puppeteer = require('puppeteer');
     await page.waitForFunction(() => location.pathname === '/projects/English_teaching_Platform.html' && document.querySelectorAll('[data-rendered]').length === 5);
     await page.goto(origin + '/index.html');
     await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 8);
+    assert.equal(await page.$eval('[data-all-projects]', element => element.href), origin + '/projects.html');
+    await page.click('[data-all-projects]');
+    await page.waitForFunction(() => document.querySelectorAll('#projects-track > div').length === 8);
+    for (const lang of ['en', 'zh', 'jp']) {
+      await page.evaluate(async code => (await import('/shared/render.js')).setLanguage(code), lang);
+      const translated = JSON.parse(fs.readFileSync(path.join(root, 'languages', {en:'english',zh:'chinese',jp:'japanese'}[lang], 'projects.json'), 'utf8'));
+      assert.equal(await page.$eval('#past_project', element => element.textContent), translated.all_projects_title);
+      assert.equal(await page.$$eval('#projects-track > div > a', elements => elements.length), 8);
+      assert((await page.$eval('#projects-track', element => element.textContent)).includes(translated.projects.fakeopenclaw.title));
+      assert.equal(await page.$eval('[data-carousel-controls]', element => getComputedStyle(element).display), 'none');
+    }
+    await page.click('#projects-track a[href$="FakeOpenClaw.html"]');
+    await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 5);
+    assert.equal(await page.$eval('[data-i18n="claw_status"]', element => element.textContent), '完成');
+    await page.goto(origin + '/index.html');
+    await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 8);
     // Fresh page: exercise per-field fallback and unavailable packs.
     testFallback = true;
     await page.evaluate(() => localStorage.setItem('portfolio-language', 'en'));

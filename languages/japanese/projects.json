@@ -1,4 +1,6 @@
 {
+  "all_projects_title": "すべてのプロジェクト",
+  "all_projects_link": "すべて見る →",
   "past_project": "過去のプロジェクト",
   "previous": "前へ",
   "next": "次へ",
@@ -10,7 +12,7 @@
   "PJ3_description": "AGV 制御、データ監視、データベース同期を統合した卒業プロジェクト。",
   "projects": {
     "fakeopenclaw": {
-      "title": "FakeOpenClaw (開発中)",
+      "title": "FakeOpenClaw (完成)",
       "description": "自然言語の指示を OpenRouter 経由でブラウザー自動化、スプレッドシート操作、ローカルコマンド実行につなげる Python 製 AI エージェント。"
     },
     "globe-gallery": {

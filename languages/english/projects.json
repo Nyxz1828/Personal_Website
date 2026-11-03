@@ -1,4 +1,6 @@
 {
+  "all_projects_title": "All Projects",
+  "all_projects_link": "View All →",
   "past_project": "Projects",
   "previous": "Prev",
   "next": "Next",
@@ -10,7 +12,7 @@
   "PJ3_description": "Capstone project integrating AGV control, data monitoring, and database synchronization.",
   "projects": {
     "fakeopenclaw": {
-      "title": "FakeOpenClaw (In Development)",
+      "title": "FakeOpenClaw (Completed)",
       "description": "A Python AI agent connecting natural-language instructions with browser automation, spreadsheet operations, and local command execution through OpenRouter."
     },
     "globe-gallery": {

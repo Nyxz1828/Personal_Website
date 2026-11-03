@@ -1,7 +1,6 @@
 {
   "claw_title": "FakeOpenClaw — リモート AI 自動化エージェント",
-  "claw_status": "開発中",
-  "claw_status": "開発中",
+  "claw_status": "完成",
   "claw_description": "自然言語の指示を OpenRouter 経由でブラウザー自動化、スプレッドシート操作、ローカルコマンド実行につなげる Python 製 AI エージェント。",
   "claw_github": "GitHub でソースを見る →",
   "claw_overview_title": "プロジェクト概要",

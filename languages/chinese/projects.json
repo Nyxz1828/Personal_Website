@@ -1,4 +1,6 @@
 {
+  "all_projects_title": "所有專案",
+  "all_projects_link": "查看全部 →",
   "past_project": "過往專案",
   "previous": "上一頁",
   "next": "下一頁",
@@ -10,7 +12,7 @@
   "PJ3_description": "整合 AGV 控制、資料監控與資料庫同步的畢業專題。",
   "projects": {
     "fakeopenclaw": {
-      "title": "FakeOpenClaw (開發中)",
+      "title": "FakeOpenClaw (已完成)",
       "description": "以 Python 開發的 AI 代理，透過 OpenRouter 將自然語言指令連結至瀏覽器自動化、試算表操作與本機命令執行。"
     },
     "globe-gallery": {

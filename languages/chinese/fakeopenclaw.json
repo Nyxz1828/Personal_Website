@@ -1,7 +1,6 @@
 {
   "claw_title": "FakeOpenClaw — 遠端 AI 自動化代理",
-  "claw_status": "開發中",
-  "claw_status": "開發中",
+  "claw_status": "已完成",
   "claw_description": "以 Python 開發的 AI 代理，透過 OpenRouter 將自然語言指令連結至瀏覽器自動化、試算表操作與本機命令執行。",
   "claw_github": "查看 GitHub 原始碼 →",
   "claw_overview_title": "專案概覽",
