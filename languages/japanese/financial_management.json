@@ -1,0 +1,18 @@
+{
+  "finance_title": "Auto Financial System — AI 支出管理・財務ダッシュボード",
+  "finance_name": "Auto Financial System 自動財務管理システム",
+  "finance_description": "ChatGPT によるレシート処理支援、Google スプレッドシートへの自動支出記録、インタラクティブな財務ダッシュボードを組み合わせた個人向け財務管理システム。",
+  "finance_overview_title": "プロジェクト概要",
+  "finance_overview": "Auto Financial System は AI によるレシート情報の抽出支援、自動支出記録、財務データの可視化を連携させます。Google スプレッドシートと Google Apps Script を中心に、取引の分類、支出管理、消費分析をまとめたワークフローを構築しています。",
+  "finance_features_title": "主な機能",
+  "finance_receipts": "AI レシート処理支援：ChatGPT でレシート情報を抽出し、支出の追跡に活用します。",
+  "finance_logging": "自動支出記録：Google スプレッドシートに支出を記録し、取引をカテゴリー別に整理します。",
+  "finance_monthly": "月次サマリー：支出合計を確認し、月ごとの消費を比較できます。",
+  "finance_dashboard": "インタラクティブなダッシュボード：財務グラフで支出傾向やカテゴリー別の内訳を確認できます。",
+  "finance_stores": "店舗分析：店舗別の支出から購買傾向を把握できます。",
+  "finance_technical_title": "技術実装",
+  "finance_pipeline": "データフロー：ChatGPT がレシート情報の抽出を支援し、Google スプレッドシートに支出を記録します。Google Apps Script が自動データ処理を支えます。",
+  "finance_frontend": "ダッシュボード：JavaScript、HTML、CSS によるインターフェースで、財務データの可視化、月次比較、カテゴリー内訳、店舗分析を提供します。",
+  "finance_demo_title": "デモ動画",
+  "finance_demo_description": "Auto Financial System のデモで、AI による支出管理支援と財務ダッシュボードの機能をご覧ください。"
+}

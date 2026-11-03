@@ -36,8 +36,8 @@
       "description": "使用 Unity 與 C# 開發的個人 JLPT 互動語言學習遊戲專案。"
     },
     "financial-management": {
-      "title": "收據與財務管理系統（開發中）",
-      "description": "串接 GPT、Google Apps Script 與 Excel 的財務資料自動化流程，用於處理與整理財務資訊。"
+      "title": "Auto Financial System 自動化財務系統",
+      "description": "結合 ChatGPT 輔助收據處理、Google 試算表自動支出紀錄與互動式財務儀表板的個人財務管理系統。"
     },
     "english-teaching": {
       "title": "英語教學平台",

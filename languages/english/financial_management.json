@@ -1,0 +1,18 @@
+{
+  "finance_title": "Auto Financial System — AI-Powered Expense Tracking & Financial Dashboard",
+  "finance_name": "Auto Financial System",
+  "finance_description": "A personal financial management system combining ChatGPT-assisted receipt processing, automated expense logging in Google Sheets, and an interactive financial dashboard.",
+  "finance_overview_title": "Project Overview",
+  "finance_overview": "Auto Financial System connects AI-assisted receipt information extraction with automated expense recording and financial visualization. It brings transaction categorization, expense management, and spending analysis into a workflow built around Google Sheets and Google Apps Script.",
+  "finance_features_title": "Main Features",
+  "finance_receipts": "AI-assisted receipt processing: use ChatGPT to extract receipt information for expense tracking.",
+  "finance_logging": "Automated expense logging: record expenses in Google Sheets and organize transactions by category.",
+  "finance_monthly": "Monthly summaries: review spending totals and compare expenses across months.",
+  "finance_dashboard": "Interactive dashboard: explore financial charts, spending trends, and category breakdowns.",
+  "finance_stores": "Store analysis: review spending by store to better understand purchasing patterns.",
+  "finance_technical_title": "Technical Implementation",
+  "finance_pipeline": "Data workflow: ChatGPT assists with receipt information extraction, Google Sheets records expense data, and Google Apps Script supports automated data processing.",
+  "finance_frontend": "Dashboard: JavaScript, HTML, and CSS provide the interface for interactive financial visualization, monthly comparisons, category breakdowns, and store analysis.",
+  "finance_demo_title": "Demo Video",
+  "finance_demo_description": "Watch the Auto Financial System demonstration to explore its AI-assisted expense tracking and financial dashboard."
+}

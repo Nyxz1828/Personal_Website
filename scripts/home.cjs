@@ -47,7 +47,7 @@ const puppeteer = require('puppeteer');
     await page.goto(origin + '/index.html');
     await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 8);
     assert.equal(await page.$$eval('#projects-track > div', cards => cards.length), 8);
-    assert.equal(packRequests.length, 12);
+    assert.equal(packRequests.length, 13);
     assert(packRequests.every(key => key.startsWith('english/')));
     for (const [lang, htmlLang, about, title] of [
       ['zh', 'zh-Hant', '關於我', '自動化客服系統'],
@@ -74,8 +74,8 @@ const puppeteer = require('puppeteer');
     assert.equal(await page.$eval('html', element => element.classList.contains('dark')), !dark);
     await page.select('#languageSelect', 'zh');
     await page.waitForFunction(() => document.documentElement.lang === 'zh-Hant');
-    assert.equal(packRequests.length, 36);
-    assert.equal(new Set(packRequests).size, 36);
+    assert.equal(packRequests.length, 39);
+    assert.equal(new Set(packRequests).size, 39);
     await page.reload();
     await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 8);
     assert.equal(await page.$eval('#languageSelect', element => element.value), 'zh');
@@ -171,6 +171,23 @@ const puppeteer = require('puppeteer');
     await page.click('#projects-track a[href$="FakeOpenClaw.html"]');
     await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 5);
     assert.equal(await page.$eval('[data-i18n="claw_status"]', element => element.textContent), '完成');
+    await page.goto(origin + '/index.html');
+    await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 8);
+    assert.equal(await page.$$eval('#projects-track a[href$="Financial_Management_System.html"]', elements => elements.length), 1);
+    await page.click('#projects-track a[href$="Financial_Management_System.html"]');
+    await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 5);
+    for (const lang of ['en', 'zh', 'jp']) {
+      await page.evaluate(async code => (await import('/shared/render.js')).setLanguage(code), lang);
+      const translated = JSON.parse(fs.readFileSync(path.join(root, 'languages', {en:'english',zh:'chinese',jp:'japanese'}[lang], 'financial_management.json'), 'utf8'));
+      const content = await page.$$eval('[data-component="financial_management"] [data-i18n]', elements => elements.map(element => [element.dataset.i18n, element.textContent]));
+      for (const [key, value] of content) assert.equal(value, translated[key]);
+      assert.equal(await page.$eval('#financial-demo iframe', element => element.src), 'https://www.youtube.com/embed/apYT07-ZmMw');
+      assert.equal(await page.$eval('#financial-demo iframe', element => element.title), translated.finance_demo_title);
+      assert((await page.$eval('[data-home-anchor="projects"]', element => element.href)).endsWith('/index.html#projects'));
+    }
+    const financialDark = await page.$eval('html', element => element.classList.contains('dark'));
+    await page.click('#themeToggle');
+    assert.equal(await page.$eval('html', element => element.classList.contains('dark')), !financialDark);
     await page.goto(origin + '/index.html');
     await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 8);
     // Fresh page: exercise per-field fallback and unavailable packs.

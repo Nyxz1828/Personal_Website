@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Financial System | CodeCraft Studio</title>
+    <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwindcss has darkmode issue, -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <link rel="stylesheet" href="shared/styles.css">
+  <script type="module" src="shared/render.js"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-700 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+  <div data-component="header"></div>
+  <main>
+    <div data-component="financial_management"></div>
+  </main>
+  <div data-component="notes"></div>
+  <div data-component="additional"></div>
+  <div data-component="footer"></div>
+  <noscript>Please enable JavaScript to view this page. 請啟用 JavaScript。JavaScript を有効にしてください。</noscript>
+</body>
+</html>

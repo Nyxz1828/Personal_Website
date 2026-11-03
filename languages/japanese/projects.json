@@ -36,8 +36,8 @@
       "description": "Unity と C# を使用した、対話型の日本語学習向け JLPT ゲームの個人プロジェクト。"
     },
     "financial-management": {
-      "title": "レシート・財務管理システム（開発中）",
-      "description": "GPT、Google Apps Script、Excel を連携させ、財務情報を処理・整理するデータ自動化パイプライン。"
+      "title": "Auto Financial System 自動財務管理システム",
+      "description": "ChatGPT によるレシート処理支援、Google スプレッドシートへの自動支出記録、インタラクティブな財務ダッシュボードを組み合わせた個人向け財務管理システム。"
     },
     "english-teaching": {
       "title": "英語教育プラットフォーム",

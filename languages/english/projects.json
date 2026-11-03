@@ -36,8 +36,8 @@
       "description": "Personal project creating a JLPT learning game using Unity and C# for interactive language learning."
     },
     "financial-management": {
-      "title": "Reciept & Financial Management System (WIP)",
-      "description": "A financial data automation pipeline connecting GPT, Google Apps Script, and Excel to process and organize financial information."
+      "title": "Auto Financial System",
+      "description": "A personal financial management system combining ChatGPT-assisted receipt processing, automated expense logging in Google Sheets, and an interactive financial dashboard."
     },
     "english-teaching": {
       "title": "English Teaching Platform",

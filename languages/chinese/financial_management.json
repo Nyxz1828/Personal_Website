@@ -1,0 +1,18 @@
+{
+  "finance_title": "Auto Financial System — AI 支出追蹤與財務儀表板",
+  "finance_name": "Auto Financial System 自動化財務系統",
+  "finance_description": "結合 ChatGPT 輔助收據處理、Google 試算表自動支出紀錄與互動式財務儀表板的個人財務管理系統。",
+  "finance_overview_title": "專案概覽",
+  "finance_overview": "Auto Financial System 將 AI 輔助收據資訊擷取、自動支出紀錄與財務視覺化串接起來，以 Google 試算表與 Google Apps Script 為核心，整合交易分類、支出管理及消費分析。",
+  "finance_features_title": "主要功能",
+  "finance_receipts": "AI 輔助收據處理：使用 ChatGPT 擷取收據資訊，用於支出追蹤。",
+  "finance_logging": "自動支出紀錄：將支出記錄至 Google 試算表，並依類別整理交易。",
+  "finance_monthly": "每月摘要：檢視支出總額，並比較不同月份的消費。",
+  "finance_dashboard": "互動式儀表板：透過財務圖表探索支出趨勢與類別分布。",
+  "finance_stores": "商店分析：依商店檢視支出，了解個人消費模式。",
+  "finance_technical_title": "技術實作",
+  "finance_pipeline": "資料流程：由 ChatGPT 輔助擷取收據資訊，Google 試算表儲存支出資料，Google Apps Script 支援自動化資料處理。",
+  "finance_frontend": "儀表板：使用 JavaScript、HTML 與 CSS 建立互動式財務視覺化介面，呈現每月比較、類別分布與商店分析。",
+  "finance_demo_title": "示範影片",
+  "finance_demo_description": "觀看 Auto Financial System 的操作示範，了解 AI 輔助支出追蹤與財務儀表板功能。"
+}
