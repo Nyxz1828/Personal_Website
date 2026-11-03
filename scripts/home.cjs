@@ -11,7 +11,7 @@ const puppeteer = require('puppeteer');
     const file = path.resolve(root, '.' + decodeURIComponent(request.url.split('?')[0]));
     if (!file.startsWith(root + path.sep)) { response.writeHead(403).end(); return; }
     try {
-      const types = { '.html': 'text/html', '.js': 'text/javascript', '.json': 'application/json', '.css': 'text/css' };
+      const types = { '.html': 'text/html', '.js': 'text/javascript', '.json': 'application/json', '.css': 'text/css', '.svg': 'image/svg+xml' };
       response.setHeader('Content-Type', (types[path.extname(file)] || 'text/plain') + '; charset=utf-8');
       response.end(fs.readFileSync(file));
     } catch { response.writeHead(404).end('Not found'); }
@@ -46,8 +46,8 @@ const puppeteer = require('puppeteer');
     const origin = `http://127.0.0.1:${server.address().port}`;
     await page.goto(origin + '/index.html');
     await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 8);
-    assert.equal(await page.$$eval('#projects-track > div', cards => cards.length), 7);
-    assert.equal(packRequests.length, 11);
+    assert.equal(await page.$$eval('#projects-track > div', cards => cards.length), 8);
+    assert.equal(packRequests.length, 12);
     assert(packRequests.every(key => key.startsWith('english/')));
     for (const [lang, htmlLang, about, title] of [
       ['zh', 'zh-Hant', '關於我', '自動化客服系統'],
@@ -74,8 +74,8 @@ const puppeteer = require('puppeteer');
     assert.equal(await page.$eval('html', element => element.classList.contains('dark')), !dark);
     await page.select('#languageSelect', 'zh');
     await page.waitForFunction(() => document.documentElement.lang === 'zh-Hant');
-    assert.equal(packRequests.length, 33);
-    assert.equal(new Set(packRequests).size, 33);
+    assert.equal(packRequests.length, 36);
+    assert.equal(new Set(packRequests).size, 36);
     await page.reload();
     await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 8);
     assert.equal(await page.$eval('#languageSelect', element => element.value), 'zh');
@@ -123,6 +123,26 @@ const puppeteer = require('puppeteer');
       assert((await page.$eval('iframe[data-i18n-title="teaching_demo_title"]', element => element.src)).includes('fQDh_eruuwQ'));
       assert((await page.$eval('[data-home-anchor="projects"]', element => element.href)).endsWith('/index.html#projects'));
     }
+    assert((await page.$eval('[data-home-anchor="projects"]', element => element.href)).endsWith('/index.html#projects'));
+    await page.goto(origin + '/index.html');
+    await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 8);
+    assert((await page.$eval('#projects-track a[href$="FakeOpenClaw.html"]', element => element.href)).endsWith('/projects/FakeOpenClaw.html'));
+    await page.goto(origin + '/projects/FakeOpenClaw.html');
+    await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 5);
+    for (const lang of ['en', 'zh', 'jp']) {
+      await page.evaluate(async code => (await import('/shared/render.js')).setLanguage(code), lang);
+      const translated = JSON.parse(fs.readFileSync(path.join(root, 'languages', {en:'english',zh:'chinese',jp:'japanese'}[lang], 'fakeopenclaw.json'), 'utf8'));
+      const content = await page.$$eval('[data-component="fakeopenclaw"] [data-i18n]', elements => elements.map(element => [element.dataset.i18n, element.textContent]));
+      for (const [key, value] of content) assert.equal(value, translated[key]);
+      assert.equal(await page.$eval('#fakeopenclaw-demo iframe', element => element.title), translated.claw_demo_title);
+      assert.equal(await page.$eval('#fakeopenclaw-demo iframe', element => element.src), 'https://www.youtube.com/embed/eGm3idWQdwk');
+      assert.equal(await page.$eval('[data-i18n="claw_github"]', element => element.href), 'https://github.com/Nyxz1828/Remote_Agent');
+    }
+    await page.setViewport({ width: 400, height: 800 });
+    await page.waitForFunction(() => {
+      const image = document.querySelector('[data-component="fakeopenclaw"] img');
+      return image.complete && image.naturalWidth > 0;
+    });
     await page.goto(origin + '/projects/Globe_Gallery.html');
     await page.waitForFunction(() => document.querySelectorAll('[data-rendered]').length === 5);
     for (const lang of ['en', 'zh', 'jp']) {

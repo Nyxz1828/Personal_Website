@@ -9,6 +9,10 @@
   "PJ3": "Automated Warehouse System",
   "PJ3_description": "Capstone project integrating AGV control, data monitoring, and database synchronization.",
   "projects": {
+    "fakeopenclaw": {
+      "title": "FakeOpenClaw (In Development)",
+      "description": "A Python AI agent connecting natural-language instructions with browser automation, spreadsheet operations, and local command execution through OpenRouter."
+    },
     "globe-gallery": {
       "title": "Globe Gallery",
       "description": "A personal web development project combining photography, location tagging, and interactive 3D visualization. Capture or upload photos and turn travel memories into explorable markers on a globe."
@@ -31,7 +35,7 @@
     },
     "financial-management": {
       "title": "Reciept & Financial Management System (WIP)",
-      "description": "A bill splitting app with a financial dashboard by using tesseract OCR for receipt scanning and React for the frontend."
+      "description": "A financial data automation pipeline connecting GPT, Google Apps Script, and Excel to process and organize financial information."
     },
     "english-teaching": {
       "title": "English Teaching Platform",

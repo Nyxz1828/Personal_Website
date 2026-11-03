@@ -48,9 +48,9 @@
     "link": "Financial_Management_System.html",
     "image": "https://static.vecteezy.com/system/resources/thumbnails/049/355/955/small_2x/receipt-icon-set-tax-payment-reciept-symbol-order-purchase-invoice-sign-credit-debt-bill-icon-in-black-filled-and-outlined-style-vector.jpg",
     "tags": [
-      "React",
-      "Full-Stack",
-      "tesseract OCR"
+      "GPT",
+      "Google Apps Script",
+      "Excel"
     ]
   },
   {
@@ -75,6 +75,21 @@
       "IndexedDB",
       "WebGL",
       "Geolocation API"
+    ]
+  },
+  {
+    "id": "fakeopenclaw",
+    "link": "projects/FakeOpenClaw.html",
+    "image": "shared/fakeopenclaw.svg",
+    "tags": [
+      "Python",
+      "Selenium",
+      "OpenRouter API",
+      "LINE Messaging API",
+      "Google Apps Script",
+      "Google Sheets API",
+      "Git",
+      "GitHub"
     ]
   }
 ]

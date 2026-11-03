@@ -1,0 +1,48 @@
+<section id="fakeopenclaw" class="bg-transparent dark:bg-gray-800 py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12 text-center" data-i18n="claw_title">FakeOpenClaw — Remote AI Automation Agent</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <article class="rounded-xl overflow-hidden shadow-lg card-hover bg-gray-50 dark:bg-gray-700">
+        <img src="../shared/fakeopenclaw.svg" alt="FakeOpenClaw" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-2">FakeOpenClaw</h3>
+          <span class="inline-block px-2 py-1 mb-3 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200" data-i18n="claw_status">In Development</span>
+          <p class="text-sm mb-3 text-gray-600 dark:text-gray-300" data-i18n="claw_description">A Python AI agent connecting natural-language instructions with browser automation, spreadsheet operations, and local command execution through OpenRouter.</p>
+          <div class="flex flex-wrap gap-2 mb-3"><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Python</span><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Selenium</span><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">OpenRouter API</span><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">LINE Messaging API</span><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Google Apps Script</span><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Google Sheets API</span><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Git</span><span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">GitHub</span></div>
+          <a href="https://github.com/Nyxz1828/Remote_Agent" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-300 hover:underline font-medium" data-i18n="claw_github">View on GitHub &#8594;</a>
+        </div>
+      </article>
+      <article class="md:col-span-2 rounded-xl shadow-lg p-8 bg-gray-50 dark:bg-gray-700 card-hover">
+        <h3 class="text-2xl font-semibold mb-4" data-i18n="claw_overview_title">Project Overview</h3>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" data-i18n="claw_overview">FakeOpenClaw explores how an AI agent can translate natural-language requests into executable actions. Users submit instructions through the terminal or Google Sheets; the Python agent consults an OpenRouter model, runs one command at a time, and returns each result to the conversation until the model provides a final answer.</p><p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" data-i18n="claw_goal">The project demonstrates API integration, tool orchestration, browser control, and remote task input within a modular Python workflow.</p>
+        <h3 class="text-xl font-semibold mb-4" data-i18n="claw_features_title">Key Features</h3>
+        <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-300"><li class="" data-i18n="claw_feature_input">Remote task input: receive prompts from the terminal or a polled Google Sheets cell.</li>
+<li class="" data-i18n="claw_feature_ai">AI task planning: use OpenRouter to interpret requests and select the next shell, browser, or spreadsheet action.</li>
+<li class="" data-i18n="claw_feature_browser">Selenium browser control: navigate pages, search Google, follow results, read visible page content, and capture screenshots.</li>
+<li class="" data-i18n="claw_feature_sheets">Google Sheets operations: read ranges, update cells and ranges, append rows, clear data, and export CSV or JSON.</li>
+<li class="" data-i18n="claw_feature_shell">Command execution: run terminal commands and pass their output back to the agent for subsequent decisions.</li>
+<li class="" data-i18n="claw_feature_logging">Response logging: append timestamped AI replies to Google Sheets while feeding tool results back into the agent conversation.</li></ul>
+      </article>
+    </div>
+    <article class="rounded-xl shadow-lg p-8 mt-8 bg-gray-50 dark:bg-gray-700">
+      <h3 class="text-2xl font-semibold mb-4" data-i18n="claw_technical_title">Technical Implementation</h3>
+      <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" data-i18n="claw_technical_loop">Agent loop: main.py combines agent rules and tool descriptions into a system prompt. It parses COMMAND JSON or DONE responses, dispatches commands, and feeds execution results back to the model.</p>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" data-i18n="claw_technical_tools">Tool modules: sele.py handles Selenium browser actions, while google_sheet.py uses gspread and service-account authentication for prompt polling, spreadsheet operations, and reply logging.</p>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" data-i18n="claw_technical_validation">Command validation: the Python dispatcher validates command types and restricts spreadsheet tool actions to configured worksheet names. Parsing and execution errors are returned to the model for another decision.</p>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" data-i18n="claw_technical_stack">Technology stack: Python, Selenium, OpenRouter API, and Google Sheets API, with Git and GitHub for version control. LINE Messaging API and Google Apps Script support the owner-described messaging integrations.</p>
+      <h3 class="text-xl font-semibold mb-4" data-i18n="claw_integrations_title">Messaging Integrations</h3><p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" data-i18n="claw_integrations">The project owner also describes LINE Bot and Google Apps Script integrations for remotely submitting instructions. These extend the messaging workflow; their implementation is not included in the published Python repository.</p>
+    </article>
+  </div>
+</section>
+<section id="fakeopenclaw-demo" class="max-w-6xl mx-auto px-6 mb-16">
+  <div class="rounded-xl overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-700 p-5 flex flex-col md:flex-row gap-6 card-hover">
+    <div class="w-full md:w-2/3 rounded-xl overflow-hidden aspect-video">
+      <iframe class="w-full h-full" src="https://www.youtube.com/embed/eGm3idWQdwk" title="Demo Video" data-i18n-title="claw_demo_title" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="w-full md:w-1/3 flex flex-col justify-center">
+      <h3 class="text-xl font-semibold mb-2" data-i18n="claw_demo_title">Demo Video</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300" data-i18n="claw_demo_description">Watch FakeOpenClaw in action and explore its remote AI automation workflow.</p>
+      <div class="mt-4"><a href="https://github.com/Nyxz1828/Remote_Agent" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-300 hover:underline font-medium" data-i18n="claw_github">View on GitHub &#8594;</a></div>
+    </div>
+  </div>
+</section>

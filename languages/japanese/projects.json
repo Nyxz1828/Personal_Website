@@ -9,6 +9,10 @@
   "PJ3": "自動倉庫システム",
   "PJ3_description": "AGV 制御、データ監視、データベース同期を統合した卒業プロジェクト。",
   "projects": {
+    "fakeopenclaw": {
+      "title": "FakeOpenClaw (開発中)",
+      "description": "自然言語の指示を OpenRouter 経由でブラウザー自動化、スプレッドシート操作、ローカルコマンド実行につなげる Python 製 AI エージェント。"
+    },
     "globe-gallery": {
       "title": "Globe Gallery",
       "description": "写真、位置情報、インタラクティブな 3D 可視化を組み合わせた個人 Web 開発プロジェクトです。撮影・アップロードした写真を地球上のマーカーとして表示し、旅の思い出を探索できます。"
@@ -31,7 +35,7 @@
     },
     "financial-management": {
       "title": "レシート・財務管理システム（開発中）",
-      "description": "Tesseract OCR によるレシート読み取りと React のフロントエンドを使い、財務ダッシュボードを備えた割り勘アプリ。"
+      "description": "GPT、Google Apps Script、Excel を連携させ、財務情報を処理・整理するデータ自動化パイプライン。"
     },
     "english-teaching": {
       "title": "英語教育プラットフォーム",

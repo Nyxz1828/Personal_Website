@@ -9,6 +9,10 @@
   "PJ3": "自動化倉儲系統",
   "PJ3_description": "整合 AGV 控制、資料監控與資料庫同步的畢業專題。",
   "projects": {
+    "fakeopenclaw": {
+      "title": "FakeOpenClaw (開發中)",
+      "description": "以 Python 開發的 AI 代理，透過 OpenRouter 將自然語言指令連結至瀏覽器自動化、試算表操作與本機命令執行。"
+    },
     "globe-gallery": {
       "title": "Globe Gallery",
       "description": "結合攝影、地點標記與互動式 3D 視覺化的個人網頁開發專案。拍攝或上傳相片，將旅行回憶轉化為地球上的互動標記。"
@@ -31,7 +35,7 @@
     },
     "financial-management": {
       "title": "收據與財務管理系統（開發中）",
-      "description": "使用 Tesseract OCR 掃描收據、React 建立前端，並提供財務儀表板的分帳應用程式。"
+      "description": "串接 GPT、Google Apps Script 與 Excel 的財務資料自動化流程，用於處理與整理財務資訊。"
     },
     "english-teaching": {
       "title": "英語教學平台",
